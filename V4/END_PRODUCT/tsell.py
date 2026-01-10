@@ -1,2 +1,0 @@
-def sell():
-    print('SELL')
