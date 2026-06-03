@@ -21,10 +21,10 @@ The primary goals of ProfitPilot are:
 - document the evolution of trading logic across multiple versions
 - consolidate practical experience with finance, programming, and systems design
 
-##Current project workflow:
-div style=background-color #2D2D2D; padding 10px;
-  img src=Profit_Pilot_diagram.png 
-div
+## Current project workflow:
+<div style="background-color: #2D2D2D; padding: 10px;">
+  <img src="Profit_Pilot_diagram.png" />
+</div>
 
 The papers mentioned are:
 
