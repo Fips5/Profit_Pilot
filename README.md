@@ -28,11 +28,11 @@ The primary goals of ProfitPilot are:
 
 The papers mentioned are:
 
-- ```[1]2503.07140v1.pdf  Application of Multiple Chain-of-Thought in Contrastive Reasoning for Implicit Sentiment Analysis
+- [1]2503.07140v1.pdf  Application of Multiple Chain-of-Thought in Contrastive Reasoning for Implicit Sentiment Analysis
 
-- ```[2]1703.10667v1.pdf  TS-LSTMandTemporal-Inception: Exploiting Spatiotemporal Dynamics for Activity Recognition
+- [2]1703.10667v1.pdf  TS-LSTMandTemporal-Inception: Exploiting Spatiotemporal Dynamics for Activity Recognition
 
-- ```[3]1912.09363v3.pdf Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting (I know the abstract of this one 90% by heart) 
+- [3]1912.09363v3.pdf Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting (I know the abstract of this one 90% by heart) 
 
 Although the papers studied for this project to achieve are a lot,for mostly nothing, you can find them in the ```/studies/all_studies
 
