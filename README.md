@@ -23,7 +23,7 @@ The primary goals of ProfitPilot are:
 
 ##Current project workflow:
 
-![Diagram](Profit_Pilot_diaram.drawio (2).png)]
+![Diagram](Profit_Pilot_diaram.drawio%20(2).png)
 
 The papers mentioned are:
 
