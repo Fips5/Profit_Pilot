@@ -23,7 +23,7 @@ The primary goals of ProfitPilot are:
 
 ## Current project workflow:
 <div style="background-color: #2D2D2D; padding: 10px;">
-  <img src="Profit_Pilot_diagram.png" />
+  <img src="Profit_Pilot_diaram.drawio.png" />
 </div>
 
 The papers mentioned are:
