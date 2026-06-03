@@ -2,9 +2,7 @@
 
 ## Overview
 
-ProfitPilot is a personal, long-term trading bot project I have been developing over the course of three years, starting during high school. The project began as a collection of early versions and experiments, and over time has evolved into a structured system with multiple versions and increasingly advanced financial analysis and automation features.
-
-ProfitPilot reflects my journey into the world of finance, algorithmic trading, data analysis, and Python software development. Working on this project has significantly deepened my understanding of financial markets, trading strategies, and software engineering best practices.
+ProfitPilot is a personal, long-term trading bot project I have been developing for three years, starting in high school. The project began as a collection of early versions and experiments.
 
 ---
 
@@ -12,48 +10,37 @@ ProfitPilot reflects my journey into the world of finance, algorithmic trading, 
 
 The primary goals of ProfitPilot are:
 
-- To research, implement, and test algorithmic trading strategies
-- To build automation around market data ingestion, signal generation, and trade execution
-- To document the evolution of trading logic across multiple versions
-- To consolidate practical experience with finance, programming, and systems design
+- research, implement, and test algorithmic trading strategies
 
----
+- gather and process all the information needed in decision making, not having to rely on paid-for resources at all
 
-## Versions and Evolution
+- test different models in the environment, adjusting them so they perform optimally, compare them ,and choose based on complexity, speed, and accuracy, basic pros nd cons
 
-The repository contains multiple versions of the project, each marking important milestones in development:
+- hopefully achieve total automation, although changing the degree of skepticism of the model is the best I can do  
+- build automation around market data ingestion, signal generation, and trade execution
+- document the evolution of trading logic across multiple versions
+- consolidate practical experience with finance, programming, and systems design
 
-- **V1 – Early high-school experiments**  
-  Initial hacks and proof-of-concept logic, learning the basics of data handling and decision rules.
+##Current project workflow:
 
-- **V3 – Fundamental analysis integration**  
-  Added modules for analyzing fundamental market indicators and incorporating them into strategy.
+![Diagram](Profit_Pilot_diaram.drawio%20(2).png)
 
-- **V4 – End-to-end prototype**  
-  Evolved into a more complete product, combining data ingestion, signal logic, and results tracking.
+The papers mentioned are:
 
-- **V5, V6**  
-  Continued refinements, improvements to performance, additional strategy logic, code structure enhancements.
+- ```[1]2503.07140v1.pdf  Application of Multiple Chain-of-Thought in Contrastive Reasoning for Implicit Sentiment Analysis
 
-Each version reflects a meaningful step forward in both technical complexity and strategic depth.
+- ```[2]1703.10667v1.pdf  TS-LSTMandTemporal-Inception: Exploiting Spatiotemporal Dynamics for Activity Recognition
 
----
+- ```[3]1912.09363v3.pdf Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting (I know the abstract of this one 90% by heart) 
 
-## Technologies Used
-
-- Python for core logic, scripting, and automation
-- Jupyter Notebooks for prototyping and experimentation
-- Data libraries for market data processing (Pandas, NumPy, etc.)
-- Modular architecture to separate strategy logic from infrastructure
-- Versioned development to chronicle project evolution
-
----
+Although the papers studied for this project to achieve are a lot,for mostly nothing, you can find them in the ```/studies/all_studies
 
 ## Getting Started
-
-To explore or work on the project:
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/Fips5/ProfitPilot.git
    cd ProfitPilot
+2. connect TWS to your needed ip+password+session_code
+3. check the api keys work with the previous versions api key checker
+1. Pray it works on your machine. 
