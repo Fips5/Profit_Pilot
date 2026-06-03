@@ -22,8 +22,9 @@ The primary goals of ProfitPilot are:
 - consolidate practical experience with finance, programming, and systems design
 
 ##Current project workflow:
-
-![Diagram](Profit_Pilot_diaram.drawio%20(2).png)
+div style=background-color #2D2D2D; padding 10px;
+  img src=Profit_Pilot_diagram.png 
+div
 
 The papers mentioned are:
 
