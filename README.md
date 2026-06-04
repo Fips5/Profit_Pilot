@@ -16,9 +16,12 @@ The primary goals of ProfitPilot are:
 
 - test different models in the environment, adjusting them so they perform optimally, compare them ,and choose based on complexity, speed, and accuracy, basic pros nd cons
 
-- hopefully achieve total automation, although changing the degree of skepticism of the model is the best I can do  
+- hopefully achieve total automation, although changing the degree of skepticism of the model, is the best I can do  
+
 - build automation around market data ingestion, signal generation, and trade execution
+
 - document the evolution of trading logic across multiple versions
+
 - consolidate practical experience with finance, programming, and systems design
 
 ## Current project workflow:
