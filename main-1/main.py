@@ -1041,10 +1041,1104 @@ def get_price_from_alpha(symbol: str,
     latest = sorted(ts.keys())[-1]
     return float(ts[latest]["4. close"])
 
-def append_to_df(ticker, df, api_key="f13c5ee6ed5c46c99e5a4022dc41d02f", interval="1min", outputsize=200):
+def append_to_df(ticker, df, api_key=get_api_key("twelvedata"), interval="1min", outputsize=200):
     # Get the last N rows
-    new_data = get_live_stock_data(ticker, rows=outputsize)
+    new_data = get_twelvedata_last_n_minutes(ticker, api_key, interval, outputsize)
     combined_df = pd.concat([df, new_data], ignore_index=True).drop_duplicates(subset="timestamp").sort_values("timestamp").reset_index(drop=True)
     
     print(f"{len(new_data)} new rows merged.")
     return combined_df
+
+from datetime import datetime
+
+os.makedirs("model_checkpoints", exist_ok=True)
+today_str = datetime.now().strftime('%d.%m.%Y')
+
+model.save(f"model_checkpoints/tft_PPL({today_str})_model.pt")
+long_model.save(f"model_checkpoints/tft_long_PPL({today_str}))_model.pt")
+
+model_b_day = datetime.now()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########################################################################3
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+def is_market_open():
+    """Check if the market is currently open using Polygon.io."""
+    api_key = get_api_key('polygon_2')
+    url = f"https://api.polygon.io/v1/marketstatus/now?apiKey={api_key}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        return data.get("market", "closed") == "open"
+    return False
+# ─────────────────────────────────────────────────────────────────────────────
+from concurrent.futures import ThreadPoolExecutor
+import threading
+import time
+import datetime
+import yfinance as yf
+from ibapi.client import EClient
+from ibapi.wrapper import EWrapper
+from ibapi.contract import Contract
+from ibapi.order import Order
+from ibapi.execution import ExecutionFilter
+#best = {'Symbol' : 'NVDA'}
+# === Custom IB API wrapper ===
+class IBApi(EWrapper, EClient):
+    def __init__(self):
+        EClient.__init__(self, self)
+        self.connected_evt = threading.Event()
+        self.nextOrderId = None
+        self.account_values = []
+        self.exec_details = []
+
+    def nextValidId(self, orderId: int):
+        self.nextOrderId = orderId
+        self.connected_evt.set()
+        print(f"[IB] Next valid order ID: {orderId}")
+
+    def accountSummary(self, reqId, account, tag, value, currency):
+        if tag == 'NetLiquidation':
+            self.account_values.append((datetime.datetime.now(), float(value)))
+
+    def execDetails(self, reqId, contract, execution):
+        self.latest_price = execution.price
+        self.execution_completed.set() 
+        self.exec_details.append({
+            "symbol": contract.symbol,
+            "action": execution.side,
+            "qty": execution.shares,
+            "price": execution.avgPrice,
+            "time": datetime.datetime.now()
+        })
+
+    def error(self, reqId, errorCode, errorString):
+        print(f"[ERROR] reqId={reqId} code={errorCode} msg={errorString}")
+
+# === IBKR Trading Bot === # ─────────────────────────────────────────────────────────────────────────────
+class IBTradingBot:
+    def __init__(self, usd_amount=150.0):
+        self.ib = IBApi()
+        self.clientId = 1
+        self.port = 7496
+        self.host = "127.0.0.1"
+        self.pos = 0
+        self.default_usd_amount = usd_amount
+
+    def connect(self, clientId=1):
+        self.ib.connect(self.host, self.port, clientId)
+        threading.Thread(target=self.ib.run, daemon=True).start()
+        if not self.ib.connected_evt.wait(5):
+            raise RuntimeError("No nextValidId received")
+
+    def disconnect(self):
+        self.ib.disconnect()
+
+    def make_contract(self, symbol):
+        c = Contract()
+        c.symbol = symbol
+        c.secType = "STK"
+        c.exchange = "SMART"
+        c.primaryExchange = "ISLAND"
+        c.currency = "USD"
+        return c
+
+    def get_excess_liquidity(self):
+        self.ib.account_values = []
+        self.request_account_value()
+        if self.ib.account_values:
+            try:
+                return float(self.ib.account_values[-1][1])  # NetLiquidation as float
+            except (IndexError, ValueError):
+                print("[ERROR] Could not parse NetLiquidation.")
+        return 0
+
+    def place_market_order(self, symbol, action):
+        try:
+            contract = self.make_contract(symbol)
+
+            net_liq = self.get_excess_liquidity()
+            max_usd = max(net_liq - 10, 0)
+
+            yf_data = yf.Ticker(symbol)
+            market_price = yf_data.info.get("regularMarketPrice", 100.0)
+
+            if market_price <= 0:
+                raise ValueError("Invalid market price received")
+
+            qty = max(int(max_usd // market_price), 1)
+            print(f"[ORDER] Action={action} Qty={qty} MaxUSD={max_usd:.2f} Price={market_price:.2f}")
+
+            oid = self.ib.nextOrderId
+            self.ib.nextOrderId += 1
+
+            order = Order()
+            order.action = action
+            order.orderType = "MKT"
+            order.totalQuantity = qty
+            order.tif = "DAY"
+            order.transmit = True
+
+            order.eTradeOnly = False
+            order.firmQuoteOnly = False
+
+            self.ib.exec_details = []
+            self.ib.placeOrder(oid, contract, order)
+
+            for _ in range(5):
+                time.sleep(1)
+                if self.ib.exec_details:
+                    break
+
+            if not self.ib.exec_details:
+                print("[RETRY] Order not filled, retrying once")
+                retry_oid = self.ib.nextOrderId
+                self.ib.nextOrderId += 1
+                self.ib.placeOrder(retry_oid, contract, order)
+                time.sleep(5)
+
+            if self.ib.exec_details:
+                print(f"[EXECUTED] {action} order filled.")
+                self.pos = 1 if action == "BUY" else 0
+            else:
+                print("[FAIL] Order was not filled after retry.")
+
+        except Exception as e:
+            print(f"[ERROR] Failed to place market order: {e}")
+
+    def buy(self, s):
+        self.execution_completed.clear()  # Reset before placing order
+        self.place_market_order(s, "BUY")
+    
+        # Wait for price to be received
+        if self.execution_completed.wait(timeout=10):  # wait max 10 seconds
+            return self.latest_price
+        else:
+            print("Execution price not received in time.")
+            return None
+
+    def close_buy(self, s):
+        self.place_market_order(s, "SELL")
+        
+    def request_account_value(self):
+        self.ib.reqAccountSummary(9001, "All", "NetLiquidation")
+        time.sleep(2)
+        self.ib.cancelAccountSummary(9001)
+
+    def request_executions(self):
+        f = ExecutionFilter()
+        f.time = (datetime.datetime.now() - datetime.timedelta(days=360)).strftime("%Y%m%d-%H:%M:%S")
+        self.ib.reqExecutions(9002, f)
+        time.sleep(2)
+        
+    def request_account_value(self):
+        self.ib.reqAccountSummary(9001, "All", "NetLiquidation")
+        time.sleep(2)
+        self.ib.cancelAccountSummary(9001)
+
+    def request_executions(self):
+        f = ExecutionFilter()
+        f.time = (datetime.datetime.now() - datetime.timedelta(days=360)).strftime("%Y%m%d-%H:%M:%S")
+        self.ib.reqExecutions(9002, f)
+        time.sleep(2)
+
+    def fetch_ticker_info(self, ticker):
+        tk = yf.Ticker(ticker)
+        info = tk.info
+        return {
+            "Price": info.get("regularMarketPrice", "N/A"),
+            "Bid": info.get("bid", "N/A"),
+            "Ask": info.get("ask", "N/A"),
+            "EPS": info.get("trailingEps", "N/A"),
+            "Market Cap": info.get("marketCap", "N/A"),
+            "P/E": info.get("trailingPE", "N/A"),
+            "Sector": info.get("sector", "N/A"),
+            "Industry": info.get("industry", "N/A")
+        }
+
+    def generate_eod_report(self, filename="eod_report.pdf", ticker="AAPL"):
+        self.request_account_value()
+        self.request_executions()
+
+        df = pd.DataFrame(self.ib.account_values, columns=["Timestamp", "NetLiquidation"])
+        df["Timestamp"] = pd.to_datetime(df["Timestamp"])
+        df["Shift"] = df["NetLiquidation"].shift(1)
+        df2 = df[df["NetLiquidation"] != df["Shift"]].copy()
+
+        plt.figure(figsize=(10, 4))
+        if len(df2) > 1:
+            plt.plot(df2["Timestamp"], df2["NetLiquidation"], marker="o", color="blue")
+        else:
+            val = df["NetLiquidation"].iloc[-1]
+            plt.axhline(val, linestyle="--", color="gray")
+        plt.title("Net Liquidation")
+        plt.xlabel("Time")
+        plt.ylabel("USD")
+        plt.grid(True)
+        plt.tight_layout()
+        plt.savefig("equity.png")
+        plt.close()
+
+        info = self.fetch_ticker_info(ticker)
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", "B", 16)
+        pdf.cell(0, 10, "EOD Report", ln=True)
+        pdf.set_font("Arial", "", 12)
+        pdf.cell(0, 10, f"Generated: {datetime.datetime.now():%Y-%m-%d %H:%M:%S}", ln=True)
+        pdf.ln(5)
+        pdf.image("equity.png", w=120)
+
+        pdf.set_xy(135, 30)
+        pdf.set_font("Arial", "B", 12)
+        pdf.cell(0, 8, f"Ticker: {ticker}", ln=True)
+        pdf.set_font("Arial", "", 11)
+        for k, v in info.items():
+            pdf.set_x(135)
+            pdf.cell(0, 6, f"{k}: {v}", ln=True)
+        pdf.ln(10)
+
+        pdf.set_font("Arial", "B", 14)
+        pdf.cell(0, 10, "Executions:", ln=True)
+        df_exec = pd.DataFrame(self.ib.exec_details)
+        if not df_exec.empty:
+            df_exec["time"] = pd.to_datetime(df_exec["time"], errors="coerce")
+            df_exec = df_exec.sort_values("time", ascending=False)
+            pdf.set_font("Arial", "", 10)
+            col_w = [20, 20, 20, 25, 60]
+            headers = ["symbol", "action", "qty", "price", "time"]
+            for i, h in enumerate(headers):
+                pdf.cell(col_w[i], 8, h.title(), border=1)
+            pdf.ln()
+            for _, r in df_exec.iterrows():
+                pdf.cell(col_w[0], 8, str(r.symbol), border=1)
+                pdf.cell(col_w[1], 8, str(r.action), border=1)
+                pdf.cell(col_w[2], 8, str(r.qty), border=1)
+                pdf.cell(col_w[3], 8, f"{r.price:.2f}", border=1)
+                pdf.cell(col_w[4], 8, str(r.time)[:19], border=1)
+                pdf.ln()
+
+        pdf.output(filename)
+        os.remove("equity.png")
+        print(f"[PDF] Saved {filename}")
+
+    def execDetails(self, reqId, contract, execution):
+        self.exec_details.append({
+            "execId": execution.execId,
+            "symbol": contract.symbol,
+            "action": execution.side,
+            "qty": execution.shares,
+            "price": execution.avgPrice,
+            "time": datetime.datetime.now()
+        })
+    
+    def commissionReport(self, commissionReport):
+        print(f"[COMMISSION] Received: {commissionReport.commission} {commissionReport.currency} on {commissionReport.execId}")
+        self.exec_details[-1]["commission"] = commissionReport.commission
+
+    def get_commission_percentage(self):
+        if not self.ib.exec_details:
+            print("[INFO] No execution details to compute commission.")
+            return
+
+        for detail in self.ib.exec_details:
+            if "commission" in detail:
+                total_value = detail["qty"] * detail["price"]
+                commission = detail["commission"]
+                pct = (commission / total_value) * 100 if total_value > 0 else 0
+                print(f"[RESULT] {detail['action']} {detail['qty']} @ {detail['price']:.2f}")
+                print(f"         Commission: {commission:.2f} USD")
+                print(f"         Commission %: {pct:.4f}%")
+            else:
+                print(f"[WAIT] Commission not received yet for execId={detail['execId']}")
+
+    def request_account_value(self):
+        self.ib.reqAccountSummary(9001, "All", "NetLiquidation")
+        time.sleep(2)
+        self.ib.cancelAccountSummary(9001)
+
+    def request_executions(self):
+        f = ExecutionFilter()
+        f.time = (datetime.datetime.now() - datetime.timedelta(days=360)).strftime("%Y%m%d-%H:%M:%S")
+        self.ib.reqExecutions(9002, f)
+        time.sleep(2)
+
+    def fetch_ticker_info(self, ticker):
+        tk = yf.Ticker(ticker)
+        info = tk.info
+        return {
+            "Price": info.get("regularMarketPrice", "N/A"),
+            "Bid": info.get("bid", "N/A"),
+            "Ask": info.get("ask", "N/A"),
+            "EPS": info.get("trailingEps", "N/A"),
+            "Market Cap": info.get("marketCap", "N/A"),
+            "P/E": info.get("trailingPE", "N/A"),
+            "Sector": info.get("sector", "N/A"),
+            "Industry": info.get("industry", "N/A")
+        }
+
+    def generate_eod_report(self, filename="eod_report.pdf", ticker="AAPL"):
+        self.request_account_value()
+        self.request_executions()
+        df = pd.DataFrame(self.ib.account_values, columns=["Timestamp","NetLiquidation"])
+        df["Timestamp"] = pd.to_datetime(df["Timestamp"])
+        df["Shift"] = df["NetLiquidation"].shift(1)
+        df2 = df[df["NetLiquidation"] != df["Shift"]].copy()
+        plt.figure(figsize=(10,4))
+        if len(df2) > 1:
+            plt.plot(df2["Timestamp"], df2["NetLiquidation"], marker="o", color="blue")
+        else:
+            val = df["NetLiquidation"].iloc[-1]
+            plt.axhline(val, linestyle="--", color="gray")
+        plt.title("Net Liquidation")
+        plt.xlabel("Time"); plt.ylabel("USD"); plt.grid(True)
+        plt.tight_layout()
+        plt.savefig("equity.png"); plt.close()
+
+        info = self.fetch_ticker_info(ticker)
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial","B",16); pdf.cell(0,10,"EOD Report",ln=True)
+        pdf.set_font("Arial","",12); pdf.cell(0,10,f"Generated: {datetime.datetime.now():%Y-%m-%d %H:%M:%S}",ln=True)
+        pdf.ln(5)
+        pdf.image("equity.png", w=120)
+
+        # Ticker info on right
+        pdf.set_xy(135, 30)
+        pdf.set_font("Arial","B",12); pdf.cell(0,8,f"Ticker: {ticker}", ln=True)
+        pdf.set_font("Arial","",11)
+        for k,v in info.items():
+            pdf.set_x(135); pdf.cell(0,6,f"{k}: {v}", ln=True)
+        pdf.ln(10)
+
+        # Executions table
+        pdf.set_font("Arial","B",14); pdf.cell(0,10,"Executions :",ln=True)
+        df_exec = pd.DataFrame(self.ib.exec_details)
+        if "time" in df_exec.columns:
+            df_exec["time"] = pd.to_datetime(df_exec["time"], errors="coerce")
+            df_exec = df_exec.sort_values("time", ascending=False)
+        pdf.set_font("Arial","",10)
+        col_w = [20,20,20,25,60]
+        for h in ["symbol","action","qty","price","time"]:
+            pdf.cell(col_w[["symbol","action","qty","price","time"].index(h)], 8, h.title(), border=1)
+        pdf.ln()
+        for _,r in df_exec.iterrows():
+            pdf.cell(col_w[0],8,r.symbol,border=1)
+            pdf.cell(col_w[1],8,r.action,border=1)
+            pdf.cell(col_w[2],8,str(r.qty),border=1)
+            pdf.cell(col_w[3],8,f"{r.price:.2f}",border=1)
+            pdf.cell(col_w[4],8,str(r.time)[:19],border=1)
+            pdf.ln()
+
+        pdf.output(filename)
+        os.remove("equity.png")
+        print(f"[PDF] Saved {filename}")
+
+class IBCommissionAnalyzer:
+    def __init__(self, usd_amount=50.0):
+        self.ib = IBApi()
+        self.usd_amount = usd_amount
+        self.host = "127.0.0.1"
+        self.port = 7496
+        self.clientId = 1
+
+    def connect(self):
+        self.ib.connect(self.host, self.port, self.clientId)
+        threading.Thread(target=self.ib.run, daemon=True).start()
+        if not self.ib.connected_evt.wait(5):
+            raise RuntimeError("Failed to connect to IB Gateway")
+
+    def disconnect(self):
+        self.ib.disconnect()
+
+    def get_market_price(self, symbol):
+        data = yf.Ticker(symbol)
+        price = data.info.get("regularMarketPrice", None)
+        if price is None or price <= 0:
+            raise ValueError("Could not fetch market price.")
+        return price
+
+    def estimate_required_gain_pct(self, symbol):
+        price = self.get_market_price(symbol)
+        qty = int(self.usd_amount // price)
+
+        if qty < 1:
+            raise ValueError("Not enough capital to buy 1 share.")
+
+        trade_value = qty * price
+
+        # Commission rules:
+        if trade_value < 30:
+            commission = trade_value * 0.01  # 1% rule
+        else:
+            commission = max(qty * 0.0035, 0.35)  # Tiered pricing fallback
+
+        required_pct_gain = (commission / trade_value) * 100
+
+        print(f"\n[COMMISSION ANALYSIS] for {symbol}")
+        print(f"  Price: ${price:.2f}")
+        print(f"  Qty: {qty} → Trade value: ${trade_value:.2f}")
+        print(f"  Commission estimate: ${commission:.4f}")
+        print(f"  ➤ Required stock gain to break even: {required_pct_gain:.4f}%")
+
+        return required_pct_gain
+
+def train_train_model(live_df, ticker, forecasting_horizon, static_covariates=None, USE_STATIC_COV=False):
+
+    start_time = time.time()
+
+    # Preprocessing
+    live_df = technical_indicators(live_df)
+    live_df.reset_index(inplace=True)
+    live_df = live_df.sort_values('timestamp').reset_index(drop=True)
+    live_df['y'] = live_df['close']
+    live_df.dropna(inplace=True)
+
+    # ---------------- GetXY ---------------- #
+    def getXY(df1, forecasting_horizon, freq='5min', freq_code='5T'):
+        df = df1.copy()
+        df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce')
+        df.set_index('timestamp', inplace=True)
+        df = df.resample(freq_code).asfreq().fillna(method='ffill').reset_index()
+        df['y'] = df['close'].shift(-forecasting_horizon)
+        df = df.iloc[:-forecasting_horizon].copy()
+        xdf = df.copy()
+        ydf = df[['timestamp', 'y']].copy()
+        cov_cols = [col for col in xdf.columns if col not in ['timestamp', 'y']]
+        y_series = TimeSeries.from_dataframe(ydf, time_col='timestamp', value_cols='y', freq=freq, fill_missing_dates=True)
+        X_series = TimeSeries.from_dataframe(xdf, time_col='timestamp', value_cols=cov_cols, freq=freq, fill_missing_dates=True)
+        return X_series, y_series, xdf, ydf
+
+    # Create transformed TimeSeries
+    X_series, y_series, xdf, ydf = getXY(live_df, forecasting_horizon)
+    xdf['y'] = ydf['y'].values
+
+    series = TimeSeries.from_dataframe(
+        xdf,
+        value_cols='y',
+        time_col='timestamp',
+        fill_missing_dates=True,
+        freq="5min",
+        static_covariates=static_covariates if USE_STATIC_COV else None
+    )
+
+    scaler1, scaler2 = Scaler(), Scaler()
+    y_transformed = scaler1.fit_transform(y_series)
+    past_covariates_transformed = scaler2.fit_transform(series)
+
+    def prepare_series(transformed_series, final_len=None):
+        df = transformed_series.pd_dataframe().fillna(method='ffill').fillna(method='bfill')
+        if final_len is not None:
+            df = df.iloc[-final_len:]
+        return df, TimeSeries.from_dataframe(df).astype('float32')
+
+    y_transformed_df, y_transformed_clean = prepare_series(y_transformed, final_len=7506)
+    past_covariates_transformed_df, past_covariates_transformed_clean = prepare_series(past_covariates_transformed, final_len=17157)
+
+    # ---------------- Define Model ---------------- #
+    def encode_hour(idx):
+        return idx.hour / 24
+
+    add_encoders = {
+        'cyclic': {'future': ['hour', 'day', 'dayofweek', 'week', 'month']},
+        'datetime_attribute': {'future': ['hour', 'day', 'dayofweek', 'week', 'month']},
+        'position': {'past': ['relative'], 'future': ['relative']},
+        'custom': {'past': [encode_hour], 'future': [encode_hour]},
+        'transformer': Scaler(),
+        'tz': 'CET'
+    }
+
+    #best_params_df = pd.read_csv(f'{ticker}/{ticker}_best_params.csv')
+    #best_params = best_params_df.iloc[0]
+
+    best_params_dict = { 
+        'output_chunk_length': 5,
+        'num_attention_heads': int(best_params['num_attention_heads']),
+        'n_epochs': int(best_params['n_epochs']),
+        'lstm_layers': int(best_params['lstm_layers']),
+        'input_chunk_length': int(best_params['input_chunk_length']),
+        'hidden_size': int(best_params['hidden_size']),
+        'dropout': float(best_params['dropout']),
+        'batch_size': int(best_params['batch_size']),
+        'use_static_covariates': USE_STATIC_COV,
+        'add_encoders': add_encoders,
+        'pl_trainer_kwargs': {'accelerator': 'cpu'}
+    }
+
+    # Train models
+    model = TFTModel(**best_params_dict)
+    model.fit(y_transformed_clean, past_covariates=past_covariates_transformed_clean)
+
+    end_time = time.time()
+    elapsed_seconds = round(end_time - start_time, 2)
+
+    return model,  elapsed_seconds
+
+import json
+
+def save_signal_to_json(signal, filename="signal_log.json"):
+    data = {
+        "timestamp": datetime_o.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "signal": bool(signal)  # <-- force conversion to native bool
+    }
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+    print(f"[JSON] Signal saved: {data}")
+
+def get_live_stock_data(ticker: str, api_key: str = get_api_key('twelvedata'), interval='1min', max_records: int = 5000) -> pd.DataFrame:
+    url = f"https://api.twelvedata.com/time_series?symbol={ticker}&interval={interval}&apikey={api_key}&outputsize={max_records}"
+    response = requests.get(url).json()
+
+    if "values" not in response:
+        raise Exception("Error fetching live data: " + str(response))
+
+    latest = response["values"]  # list of dicts
+
+    df = pd.DataFrame([{
+        "timestamp": pd.to_datetime(entry["datetime"]),
+        "open": float(entry["open"]),
+        "high": float(entry["high"]),
+        "low": float(entry["low"]),
+        "close": float(entry["close"]),
+        "volume": float(entry["volume"]),
+    } for entry in latest])
+
+    df = df.sort_values("timestamp").reset_index(drop=True)
+    return df
+    
+def get_hourly_stock_data(ticker: str, api_key: str = get_api_key('twelvedata'), max_records: int = 5000) -> pd.DataFrame:
+    interval = '1h'
+    url = (
+        f"https://api.twelvedata.com/time_series"
+        f"?symbol={ticker}&interval={interval}&outputsize={max_records}&apikey={api_key}"
+    )
+    
+    response = requests.get(url).json()
+
+    if "values" not in response:
+        raise Exception("Error fetching data: " + str(response))
+
+    df = pd.DataFrame([{
+        "timestamp": pd.to_datetime(entry["datetime"]),
+        "open": float(entry["open"]),
+        "high": float(entry["high"]),
+        "low": float(entry["low"]),
+        "close": float(entry["close"]),
+        "volume": float(entry["volume"]),
+    } for entry in response["values"]])
+
+    df = df.sort_values("timestamp").reset_index(drop=True)
+    return df
+
+def buy_signal(n_df, model, min_df, forecasting_horizon, static_covariates=None, 
+               long_n_df=None, long_model=None, n=5, first_pred=False):
+    
+    def markov_adaptation(forecast_pct, real_pct):
+        def classify(x):
+            if x > 0.0005: return "UP"
+            elif x < -0.0005: return "DOWN"
+            else: return "FLAT"
+
+        from collections import defaultdict
+
+        def build_chain(states):
+            chain = defaultdict(lambda: defaultdict(int))
+            for (s1, s2) in zip(states[:-1], states[1:]):
+                chain[s1][s2] += 1
+            for s1 in chain:
+                total = sum(chain[s1].values())
+                for s2 in chain[s1]:
+                    chain[s1][s2] /= total
+            return chain
+
+        def predict_seq(chain, start_state, steps):
+            result = [start_state]
+            current = start_state
+            for _ in range(steps - 1):
+                next_states = list(chain[current].keys())
+                if not next_states:
+                    break
+                probs = list(chain[current].values())
+                current = np.random.choice(next_states, p=probs)
+                result.append(current)
+            return result
+
+        real_states = [classify(p) for p in real_pct]
+        chain = build_chain(real_states)
+        forecast_states = [classify(p) for p in forecast_pct]
+        adapted_states = predict_seq(chain, forecast_states[-1], len(forecast_states))
+        mapping = {"UP": 0.001, "DOWN": -0.001, "FLAT": 0.0}
+        return pd.Series([mapping[s] for s in adapted_states]).cumsum()
+
+    # === Preprocessing short horizon ===
+    def preprocess(n_df, model, forecasting_horizon, static_covariates):
+        n_df = technical_indicators(n_df)
+        n_df.reset_index(inplace=True)
+        n_df = n_df.sort_values('timestamp').reset_index(drop=True)
+        n_df['y'] = n_df['close']
+        n_df.dropna(inplace=True)
+
+        if n_df['timestamp'].iloc[-1] < n_df['timestamp'].iloc[0]:
+            n_df = n_df.iloc[::-1].reset_index(drop=True)
+
+        if static_covariates is None:
+            series = TimeSeries.from_dataframe(n_df, time_col='timestamp', value_cols='y', freq="5min").astype("float32")
+        else:
+            series = TimeSeries.from_dataframe(n_df, time_col='timestamp', value_cols='y', freq="5min", static_covariates=static_covariates).astype("float32")
+
+        scaler = Scaler()
+        past_covariates = scaler.fit_transform(series)
+
+        # Pad if needed
+        required_end = pd.Timestamp("2025-03-11 14:30:00")
+        current_end = past_covariates.end_time()
+        freq = pd.Timedelta(minutes=5)
+        if current_end < required_end:
+            extra_steps = int(((required_end - current_end).total_seconds() / 300) + 1)
+            last_val = past_covariates.last_value()
+            extra_times = pd.date_range(start=current_end + freq, periods=extra_steps, freq="5T")
+            extra_series = TimeSeries.from_times_and_values(extra_times, [last_val] * extra_steps)
+            past_covariates = past_covariates.concatenate(extra_series)
+
+        past_covariates = past_covariates.astype("float32")
+
+        forecast = model.predict(n=forecasting_horizon, series=series, past_covariates=past_covariates)
+        forecast_values = scaler.inverse_transform(forecast).values().flatten()
+        forecast_df = pd.DataFrame({"forecast_values": forecast_values})
+
+        last_real_close = n_df['close'].iloc[-1] #confirmed value
+        forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value
+        real_pct = n_df['close'].pct_change().fillna(0).cumsum()
+
+        adapted_pct = markov_adaptation(forecast_pct, real_pct)
+        adapted_prices = last_real_close * (1 + adapted_pct)
+        forecast_df["forecast_values"] = adapted_prices.values
+
+        return forecast_df, n_df
+
+    # === Run short model
+    forecast_df, n_df = preprocess(n_df, model, forecasting_horizon, static_covariates)
+    print(forecast_df)
+    if len(forecast_df) < n:
+        print(f"[WARN] Not enough forecasted values. Expected: {n}, Got: {len(forecast_df)}")
+        return False
+
+    trend_confirmed, rsi_divergence = calculate_adx_rsi(min_df, high_col="high", low_col="low", close_col="close")
+    transition_matrix = make_markov_chain_transition_matrix(n_df, close_column_name="close")
+    trend = predict_next_trend(n_df["Trend"].iloc[-1], transition_matrix)
+
+    close_diff = abs(n_df['close'].iloc[1] - n_df['close'].iloc[0]) / n_df['close'].iloc[0]
+    forecast_diff = abs(forecast_df['forecast_values'].iloc[1] - forecast_df['forecast_values'].iloc[0]) / forecast_df['forecast_values'].iloc[0]
+    first_a = close_diff < forecast_diff
+
+    latest_close = n_df['close'].iloc[-1]
+    highest_forecast = forecast_df['forecast_values'].max()
+    newest_forecast = forecast_df['forecast_values'].iloc[0]
+    price_change = (highest_forecast - newest_forecast) / newest_forecast
+
+    print(f"Forecasted value @ step {n}: {newest_forecast}, Latest close: {latest_close}")
+    print(f"Price change (%): {price_change * 100:.2f}%")
+
+    if price_change > 0.006:
+        predicted = forecast_df['forecast_values'].iloc[0]
+        print(f"[BUY LOG] Predicted: {predicted}, Actual: {min_df['close'].iloc[-1]}")
+
+    # === Long model (if provided) ===
+    long_price_change = None
+    if long_n_df is not None and long_model is not None:
+        long_forecast_df, long_n_df = preprocess(long_n_df, long_model, forecasting_horizon, static_covariates)
+        long_latest_close = long_n_df['close'].iloc[-1]
+        long_highest_forecast = long_forecast_df['forecast_values'].max()
+        long_min_forecast = long_forecast_df['forecast_values'].min()
+        long_price_change = (long_highest_forecast - long_min_forecast) / long_min_forecast
+
+        print(f"[LONG] Forecasted minvalue : {long_min_forecast}, Latest close: {long_latest_close}")
+        print(f"[LONG] Price change (%): {long_price_change * 100:.2f}%")
+
+    return price_change, long_price_change, long_highest_forecast
+
+
+def background_training():
+    return train_train_model(df_15min, ticker, forecasting_horizon=10, USE_STATIC_COV=False)
+    
+def get_hourly_stock_data(ticker: str, api_key: str = get_api_key('twelvedata'), max_records: int = 5000) -> pd.DataFrame:
+    interval = '1h'
+    url = (
+        f"https://api.twelvedata.com/time_series"
+        f"?symbol={ticker}&interval={interval}&outputsize={max_records}&apikey={api_key}"
+    )
+    
+    response = requests.get(url).json()
+
+    if "values" not in response:
+        raise Exception("Error fetching data: " + str(response))
+
+    df = pd.DataFrame([{
+        "timestamp": pd.to_datetime(entry["datetime"]),
+        "open": float(entry["open"]),
+        "high": float(entry["high"]),
+        "low": float(entry["low"]),
+        "close": float(entry["close"]),
+        "volume": float(entry["volume"]),
+    } for entry in response["values"]])
+
+    df = df.sort_values("timestamp").reset_index(drop=True)
+    return df
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################################################################################################3
+
+
+
+
+
+
+
+
+
+ticker = best
+df_15min = get_live_stock_data(ticker, interval='5min')
+df_15min.to_csv("df_15min.csv", index=False)
+
+# Split into 4/5 (test) and 1/5 (train)
+split_index = int(len(df_15min) * 4 / 5)  # 4000 for 5000 rows
+
+test_df_15min = df_15min.iloc[:split_index].copy().reset_index(drop=True)
+train_df_15min = df_15min.iloc[split_index:].copy().reset_index(drop=True)
+
+# Optionally save them
+test_df_15min.to_csv("test_df_15min.csv", index=False)
+train_df_15min.to_csv("train_df_15min.csv", index=False)
+
+def markov_adaptation(forecast_pct, real_pct):
+        def classify(x):
+            if x > 0.0005: return "UP"
+            elif x < -0.0005: return "DOWN"
+            else: return "FLAT"
+
+        from collections import defaultdict
+
+        def build_chain(states):
+            chain = defaultdict(lambda: defaultdict(int))
+            for (s1, s2) in zip(states[:-1], states[1:]):
+                chain[s1][s2] += 1
+            for s1 in chain:
+                total = sum(chain[s1].values())
+                for s2 in chain[s1]:
+                    chain[s1][s2] /= total
+            return chain
+
+        def predict_seq(chain, start_state, steps):
+            result = [start_state]
+            current = start_state
+            for _ in range(steps - 1):
+                next_states = list(chain[current].keys())
+                if not next_states:
+                    break
+                probs = list(chain[current].values())
+                current = np.random.choice(next_states, p=probs)
+                result.append(current)
+            return result
+
+        real_states = [classify(p) for p in real_pct]
+        chain = build_chain(real_states)
+        forecast_states = [classify(p) for p in forecast_pct]
+        adapted_states = predict_seq(chain, forecast_states[-1], len(forecast_states))
+        mapping = {"UP": 0.001, "DOWN": -0.001, "FLAT": 0.0}
+        return pd.Series([mapping[s] for s in adapted_states]).cumsum()
+
+
+import datetime
+from datetime import datetime as datetime_o
+import traceback
+
+if __name__ == "__main__":
+    print(">>> Script started")
+    future = None
+    model_b_day = datetime_o.now()
+    training_time = 20 * 60
+    pos = 0
+    bot = IBTradingBot()
+    ticker = ticker
+    interval_range = 5
+    forecasting_horizon = 5
+    static_covariates = None
+    this_is_a_test = True
+    both_price = None
+    first_pred = False
+    sleep_time = 2.5 * 60
+    profit_constant = 0.0062
+    results_df = pd.DataFrame(columns=["timestamp", "Buy_Signal", "close"])
+    print(f'Model used: {model}')
+
+    clientId = 1
+    connected = False
+
+    while not connected:
+        try:
+            print(">>> Trying to connect to IB")
+            bot.connect(clientId=clientId)
+            connected = True
+            print(">>> Connected to IB")
+        except RuntimeError as e:
+            if "nextValidId" in str(e):
+                print(f"[WARN] nextValidId not received for clientId={clientId}, retrying...")
+                bot.disconnect()
+                time.sleep(2)
+                clientId += 1
+            else:
+                raise
+
+    try:
+        while True:
+            print(">>> Starting main loop iteration")
+
+            if True: #datetime_o.now() - model_b_day >= timedelta(minutes=training_time / 60):
+                if future is None or future.done() or future.cancelled():
+                    print(">>> Model training time condition met")
+                    if 'df_15min' not in globals() or df_15min is None:
+                        df_15min = get_live_stock_data(ticker, interval='5min')
+
+                        df_15min = df_15min.reset_index(drop=True)
+
+                        if df_15min['timestamp'].iloc[-1] < df_15min['timestamp'].iloc[0]:
+                            print(">>> Reversing df_15min")
+                            df_15min = df_15min.iloc[::-1].reset_index(drop=True)
+
+
+                    executor = ThreadPoolExecutor(max_workers=1)
+                    future = executor.submit(background_training)
+
+            if future and future.done():
+                print(">>> Future training completed")
+                model, training_time = future.result()
+                model_b_day = datetime_o.now()
+                print(f"[✓] Training completed: model={model}, time={training_time:.2f}s")
+
+            if (is_market_open() or this_is_a_test) and first_pred:
+                print(">>> Market is open and it's the first prediction")
+                df_1min = get_live_stock_data(ticker)
+                hourly_df = get_hourly_stock_data(ticker)
+                df_15min = get_live_stock_data(ticker, interval='5min')
+
+                df_1min = df_1min.reset_index(drop=True)
+                df_15min = df_15min.reset_index(drop=True)
+
+                if df_1min['timestamp'].iloc[-1] < df_1min['timestamp'].iloc[0]:
+                    print(">>> Reversing df_1min")
+                    df_1min = df_1min.iloc[::-1].reset_index(drop=True)
+
+                if df_15min['timestamp'].iloc[-1] < df_15min['timestamp'].iloc[0]:
+                    print(">>> Reversing df_15min")
+                    df_15min = df_15min.iloc[::-1].reset_index(drop=True)
+
+                if hourly_df['timestamp'].iloc[-1] < hourly_df['timestamp'].iloc[0]:
+                    print(">>> Reversing hourly_df")
+                    hourly_df = hourly_df.iloc[::-1].reset_index(drop=True)
+
+                print(df_15min.tail(2))
+                print(df_1min.tail(2))
+                print(hourly_df.tail(1))
+                print(ticker)
+
+                if USE_STATIC_COV:
+                    print(">>> Using static covariates")
+                    signal, long_signal, long_highest_forecast = buy_signal(
+                        n_df=df_15min, model=model, min_df=df_1min,
+                        static_covariates=static_covariates,
+                        first_pred=first_pred, n=5,
+                        forecasting_horizon=5, long_model=long_model,
+                        long_n_df=hourly_df
+                    )
+                if USE_STATIC_COV == False:
+                    print(">>> Not using Static Covariates")
+                    signal, long_signal, long_highest_forecast = buy_signal(
+                        n_df=df_15min, model=model, min_df=df_1min,
+                        first_pred=first_pred, n=5,
+                        forecasting_horizon=5, long_model=long_model,
+                        long_n_df=hourly_df
+                    )
+
+                if (signal > profit_constant) and (long_signal > 0.012) and pos == 0:
+                    print(">>> Buy signal detected")
+                    both_price = bot.buy(ticker)
+                    pos = 1
+                    open_signal = True
+
+                if both_price is not None:
+                    print(">>> Calculating exit potential")
+                    exit_potential = percent_diff = ((long_highest_forecast - both_price) / both_price) * 100
+
+                elif both_price is not None and (signal < (profit_constant - 0.004)) and pos == 1:
+                    print(">>> Sell condition check")
+                    if exit_potential < 0.02:
+                        print(">>> Sell signal detected")
+                        bot.close_buy(ticker)
+                        pos = 0
+                        open_signal = False
+
+                elif pos == 0:
+                    print(">>> No position open")
+                    open_signal = False
+
+                print(">>> Saving signal to JSON")
+                save_signal_to_json(open_signal)
+
+                print(">>> Logging results to DataFrame")
+                results_df = pd.concat([
+                    results_df,
+                    pd.DataFrame({
+                        "timestamp": [df_1min['timestamp'].iloc[-1]],
+                        "Buy_Signal": [open_signal],
+                        "close": [df_1min['close'].iloc[-1]]
+                    })
+                ], ignore_index=True)
+
+                if this_is_a_test:
+                    print(">>> Test mode: breaking loop")
+                    break
+                time.sleep(sleep_time)
+                first_pred = False
+
+            elif (is_market_open() or this_is_a_test) and not first_pred:
+                print(">>> Market is open, not first prediction")
+                df_1min = get_live_stock_data(ticker)
+                hourly_df = get_hourly_stock_data(ticker)
+                df_15min = get_live_stock_data(ticker, interval='5min')
+
+                df_1min = df_1min.reset_index(drop=True)
+                df_15min = df_15min.reset_index(drop=True)
+
+                if df_1min['timestamp'].iloc[-1] < df_1min['timestamp'].iloc[0]:
+                    print(">>> Reversing df_1min")
+                    df_1min = df_1min.iloc[::-1].reset_index(drop=True)
+
+                if df_15min['timestamp'].iloc[-1] < df_15min['timestamp'].iloc[0]:
+                    print(">>> Reversing df_15min")
+                    df_15min = df_15min.iloc[::-1].reset_index(drop=True)
+
+                if hourly_df['timestamp'].iloc[-1] < hourly_df['timestamp'].iloc[0]:
+                    print(">>> Reversing hourly_df")
+                    hourly_df = hourly_df.iloc[::-1].reset_index(drop=True)
+
+                print(df_15min.tail(2))
+                print(df_1min.tail(2))
+                print(hourly_df.tail(1))
+                print(ticker)
+
+                if USE_STATIC_COV:
+                    print(">>> Using static covariates")
+                    signal, long_signal, long_highest_forecast = buy_signal(
+                        n_df=df_15min, model=model, min_df=df_1min,
+                        static_covariates=static_covariates,
+                        first_pred=first_pred, n=5,
+                        forecasting_horizon=5, long_model=long_model,
+                        long_n_df=hourly_df
+                    )
+                if USE_STATIC_COV == False:
+                    print(">>> Not using Static Covariates")
+                    signal, long_signal, long_highest_forecast = buy_signal(
+                        n_df=df_15min, model=model, min_df=df_1min,
+                        first_pred=first_pred, n=5,
+                        forecasting_horizon=5, long_model=long_model,
+                        long_n_df=hourly_df
+                    )
+
+                if (signal > profit_constant) and (long_signal > 0.012) and pos == 0:
+                    print(">>> Buy signal detected")
+                    both_price = bot.buy(ticker)
+                    pos = 1
+                    open_signal = True
+
+                if both_price is not None:
+                    print(">>> Calculating exit potential")
+                    exit_potential = percent_diff = ((long_highest_forecast - both_price) / both_price) * 100
+
+                elif both_price is not None and (signal < (profit_constant - 0.004)) and pos == 1:
+                    print(">>> Sell condition check")
+                    if exit_potential < 0.02:
+                        print(">>> Sell signal detected")
+                        bot.close_buy(ticker)
+                        pos = 0
+                        open_signal = False
+
+                elif pos == 0:
+                    print(">>> No position open")
+                    open_signal = False
+
+                print(">>> Saving signal to JSON")
+                save_signal_to_json(open_signal)
+
+                print(">>> Logging results to DataFrame")
+                results_df = pd.concat([
+                    results_df,
+                    pd.DataFrame({
+                        "timestamp": [df_1min['timestamp'].iloc[-1]],
+                        "Buy_Signal": [open_signal],
+                        "close": [df_1min['close'].iloc[-1]]
+                    })
+                ], ignore_index=True)
+
+                first_pred = False
+
+                if this_is_a_test:
+                    print(">>> Test mode: breaking loop")
+                    break
+                time.sleep(sleep_time)
+                today_str = datetime_o.now().strftime('%Y-%m-%d')
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        print("• Full traceback:")
+        traceback.print_exc()
+        today_str = datetime_o.now().strftime('%Y-%m-%d')
+        bot.disconnect()
