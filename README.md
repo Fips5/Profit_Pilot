@@ -42,6 +42,10 @@ Although the papers studied for this project to achieve are a lot,for mostly not
    ```bash
    git clone https://github.com/Fips5/ProfitPilot.git
    cd ProfitPilot
-2. connect TWS to your needed ip+password+session_code
-3. check the api keys work with the previous versions api key checker
-1. Pray it works on your machine. 
+2. Connect TWS to your needed IP and port
+3. Go to main-1\utils\BuySell.py, line 91, the connect function, and put in the IP and ports shown in your TWS portal
+4. Check that the api keys from main-1\utils\api_keys.json work using the api key checker tool
+5. Run RUN.bat as administrator
+6. Make sure all the channels are connected from your TWS settings
+7. If it has any errors, make sure to download all the modules & libraries
+7. Pray to god it works on your machine, if not, ask some questions nd give me some info
