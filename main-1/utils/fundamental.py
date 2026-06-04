@@ -8,7 +8,7 @@ import json
 
 
 # key
-def get_api_key(key_name: str, file_path: str = "api_keys.json") -> str:
+def get_api_key(key_name: str, file_path: str = "main-1/utils/api_keys.json") -> str:
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"API key file '{file_path}' not found.")
 

@@ -34,7 +34,7 @@ time_slept = 60 * 2
 this_is_a_test = False
 first_pred = True
 USE_STATIC_COV = False
-
+forecasting_horizon = 12
 
 import os
 import re
@@ -72,7 +72,7 @@ from utils.news import scrape_insider_data, scrape_congress_trading_data, sentim
 from utils.fundamental import fundamental
 from utils.technical import get_stock_open_prices, technical_polygon, technical_indicators
 
-def get_api_key(key_name: str, file_path: str = "api_keys.json") -> str:
+def get_api_key(key_name: str, file_path: str = "main-1/utils/api_keys.json") -> str:
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"API key file '{file_path}' not found.")
 
@@ -465,7 +465,7 @@ fundamental_df = pd.DataFrame()
 technical_df = pd.DataFrame()
 fundamental_score_df = pd.DataFrame()
 
-os.makedirs(f"test_data\{ticker}", exist_ok=True)
+os.makedirs(f"test_data/{ticker}", exist_ok=True)
 
 if USE_STATIC_COV == True:
 
@@ -658,7 +658,7 @@ if USE_STATIC_COV == True:
     static_df["Sentiment Score"] = static_df["Traded Date"].apply(
         lambda x: latest_sentiment_score if x >= recent_cutoff else None
     )   
-    static_df.to_csv(f"test_data\{ticker}\{ticker}_Static_Data.csv", index=False)
+    static_df.to_csv(f"test_data/{ticker}/{ticker}_Static_Data.csv", index=False)
 
     static_df = static_df.drop(columns=['Zacks Score', 'Sentiment Score'], errors='ignore')
 
@@ -711,28 +711,28 @@ if USE_STATIC_COV == True:
     
     static_covariates = pd.DataFrame(static_with_news.mean()).T
 
-insider_df.to_csv(f"test_data\{ticker}\{ticker}_Insider_Trading.csv", index=False)
+insider_df.to_csv(f"test_data/{ticker}/{ticker}_Insider_Trading.csv", index=False)
 print('congress')
-congress_df.to_csv(f"test_data\{ticker}\{ticker}_Congress_Trades.csv", index=False)
+congress_df.to_csv(f"test_data/{ticker}/{ticker}_Congress_Trades.csv", index=False)
 print('sentiment')
-sentiment_df.to_csv(f"test_data\{ticker}\{ticker}_Sentiment_Data.csv", index=False)
+sentiment_df.to_csv(f"test_data/{ticker}/{ticker}_Sentiment_Data.csv", index=False)
 print('zacks')
-zacks_rank_df.to_csv(f"test_data\{ticker}\{ticker}_Zacks_Rank.csv", index=False)
+zacks_rank_df.to_csv(f"test_data/{ticker}/{ticker}_Zacks_Rank.csv", index=False)
 print('fundamental')
-fundamental_score_df.to_csv(f"test_data\{ticker}\{ticker}_Fundamental_Score.csv", index=False)
+fundamental_score_df.to_csv(f"test_data/{ticker}/{ticker}_Fundamental_Score.csv", index=False)
 
 technical_df = technical_polygon(symbol = ticker, interval = interval, interval_range = interval_range, days = days)
-technical_df.to_csv(f"test_data\{ticker}\{ticker}_Technical_Data.csv", index=False)
+technical_df.to_csv(f"test_data/{ticker}/{ticker}_Technical_Data.csv", index=False)
 
 
 long_technical_df = technical_polygon(symbol = ticker, interval = interval, interval_range = long_interval_range, days = long_days)
 
 live_df = technical_df
 live_df.reset_index(inplace=True)
-live_df.to_csv(f"test_data\{ticker}\{ticker}_Live_Data.csv", index=False)
+live_df.to_csv(f"test_data/{ticker}/{ticker}_Live_Data.csv", index=False)
 
-live_df = pd.read_csv(f"test_data\{ticker}\{ticker}_Live_Data.csv")
-stock_live_df = pd.read_csv(f"test_data\{ticker}\{ticker}_Live_Data.csv")
+live_df = pd.read_csv(f"test_data/{ticker}/{ticker}_Live_Data.csv")
+stock_live_df = pd.read_csv(f"test_data/{ticker}/{ticker}_Live_Data.csv")
 
 live_df = live_df.loc[:, : 'Stochastic']
 stock_live_df = stock_live_df.loc[:, : 'Stochastic']
@@ -879,8 +879,11 @@ long_y_transformed = long_scaler1.fit_transform(long_y_series)
 long_past_covariates_transformed = long_scaler2.fit_transform(long_series)
 # Helper function to process a transformed series
 def prepare_series(transformed_series, final_len=None):
-    df = transformed_series.pd_dataframe()
-    df = df.fillna(method='ffill').fillna(method='bfill')
+    if isinstance(transformed_series, pd.DataFrame):
+        df = transformed_series
+    else:
+        df = transformed_series.pd_dataframe()
+    df = df.ffill().bfill()
     if final_len is not None:
         df = df.iloc[-final_len:]
     ts = TimeSeries.from_dataframe(df).astype('float32')
