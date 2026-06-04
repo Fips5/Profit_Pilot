@@ -28,6 +28,16 @@ The primary goals of ProfitPilot are:
 <div style="background-color: #2D2D2D; padding: 10px;">
   <img src="Profit_Pilot_diaram.drawio.png" />
 </div>
+###How it woks, in text:
+- Top 5 highest and lowest ranked tickers per industry are selected from Zacks
+- Articles are scraped from Zacks, Finviz, and Yahoo Finance; if under 500 articles, sentiment is processed via Groq API, otherwise via S-LSTM
+- Sentiment scores are stored in a dataframe; the top 10 are selected by default
+- Fundamental data for the top 10 is sent to Groq API to extract an additional score, which is added to the sentiment score
+- Volatility is calculated and ranked 1-10 from lowest to highest; the rank is doubled and added to the total score
+- Technical indicators are also included as inputs, as testing showed they significantly improve TFT accuracy
+- The ticker with the highest total score is selected for live trading
+- A Temporal Fusion Transformer is trained on all static and signal data, then tested live
+- Every 10 forecasts the TFT is recalibrated using a Markov model to keep predictions close to reality
 
 The papers mentioned are:
 
@@ -50,5 +60,5 @@ Although the papers studied for this project to achieve are a lot,for mostly not
 4. Check that the api keys from main-1\utils\api_keys.json work using the api key checker tool
 5. Run RUN.bat as administrator
 6. Make sure all the channels are connected from your TWS settings
-7. If it has any errors, make sure to download all the modules & libraries
+7. If it has any errors, make sure to download all the modules & libraries, you can see the errors in output.log
 7. Pray to god it works on your machine, if not, ask some questions nd give me some info
