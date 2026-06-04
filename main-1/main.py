@@ -877,12 +877,13 @@ long_scaler2 = Scaler()
 # Apply transformations
 long_y_transformed = long_scaler1.fit_transform(long_y_series)
 long_past_covariates_transformed = long_scaler2.fit_transform(long_series)
+
 # Helper function to process a transformed series
 def prepare_series(transformed_series, final_len=None):
     if isinstance(transformed_series, pd.DataFrame):
         df = transformed_series
     else:
-        df = transformed_series.pd_dataframe()
+        df = transformed_series.to_dataframe()
     df = df.ffill().bfill()
     if final_len is not None:
         df = df.iloc[-final_len:]
@@ -908,7 +909,7 @@ add_encoders = {
     'tz': 'CET'
 }
 
-best_params_df = pd.read_csv(f'NVDA/NVDA_best_params.csv')
+best_params_df = pd.read_csv(f'main-1/utils/NVDA/NVDA_best_params.csv')
 best_params = best_params_df.iloc[0]
 
 if USE_STATIC_COV == False:
