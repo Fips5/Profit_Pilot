@@ -1,0 +1,3258 @@
+10.57   607.0\n",
+      "996  2025-01-14 10:30:00  10.7379  10.7379    10.6    10.6  1100.0\n",
+      "997  2025-01-14 10:35:00    10.58   10.645   10.58  10.645   209.0\n",
+      "998  2025-01-14 10:45:00    10.72    10.72  10.645   10.71   381.0\n",
+      "999  2025-01-14 11:20:00   10.645   10.675  10.645  10.675   201.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "fda90afd29734e279a8d46a3dcf5778a",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close  volume\n",
+      "995  2025-01-14 10:30:00  10.7379  10.7379    10.6    10.6  1100.0\n",
+      "996  2025-01-14 10:35:00    10.58   10.645   10.58  10.645   209.0\n",
+      "997  2025-01-14 10:45:00    10.72    10.72  10.645   10.71   381.0\n",
+      "998  2025-01-14 11:20:00   10.645   10.675  10.645  10.675   201.0\n",
+      "999  2025-01-14 11:25:00    10.67    10.67   10.67   10.67   412.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "e8df8d1cc37046ce85008d41853e0d5b",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp    open    high     low   close volume\n",
+      "995  2025-01-14 10:35:00   10.58  10.645   10.58  10.645  209.0\n",
+      "996  2025-01-14 10:45:00   10.72   10.72  10.645   10.71  381.0\n",
+      "997  2025-01-14 11:20:00  10.645  10.675  10.645  10.675  201.0\n",
+      "998  2025-01-14 11:25:00   10.67   10.67   10.67   10.67  412.0\n",
+      "999  2025-01-14 11:40:00   10.57   10.67   10.51   10.67  625.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "9fdf79fd21074cf7b6289997dab3c314",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open    high     low   close volume\n",
+      "995  2025-01-14 10:45:00    10.72   10.72  10.645   10.71  381.0\n",
+      "996  2025-01-14 11:20:00   10.645  10.675  10.645  10.675  201.0\n",
+      "997  2025-01-14 11:25:00    10.67   10.67   10.67   10.67  412.0\n",
+      "998  2025-01-14 11:40:00    10.57   10.67   10.51   10.67  625.0\n",
+      "999  2025-01-14 12:25:00  10.5124   10.56   10.51   10.56  670.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "e4d02d06beeb457ca01374e349df3328",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close volume\n",
+      "995  2025-01-14 11:20:00   10.645   10.675  10.645  10.675  201.0\n",
+      "996  2025-01-14 11:25:00    10.67    10.67   10.67   10.67  412.0\n",
+      "997  2025-01-14 11:40:00    10.57    10.67   10.51   10.67  625.0\n",
+      "998  2025-01-14 12:25:00  10.5124    10.56   10.51   10.56  670.0\n",
+      "999  2025-01-14 12:35:00  10.6012  10.6012  10.555  10.555  631.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "73a310f5eb1c4a9eae6e83d583c05edb",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close  volume\n",
+      "995  2025-01-14 11:25:00    10.67    10.67   10.67   10.67   412.0\n",
+      "996  2025-01-14 11:40:00    10.57    10.67   10.51   10.67   625.0\n",
+      "997  2025-01-14 12:25:00  10.5124    10.56   10.51   10.56   670.0\n",
+      "998  2025-01-14 12:35:00  10.6012  10.6012  10.555  10.555   631.0\n",
+      "999  2025-01-14 12:40:00    10.59    10.61   10.59    10.6  1504.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "f56da3c4413f411fba4c42b653bb63b5",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close  volume\n",
+      "995  2025-01-14 11:40:00    10.57    10.67   10.51   10.67   625.0\n",
+      "996  2025-01-14 12:25:00  10.5124    10.56   10.51   10.56   670.0\n",
+      "997  2025-01-14 12:35:00  10.6012  10.6012  10.555  10.555   631.0\n",
+      "998  2025-01-14 12:40:00    10.59    10.61   10.59    10.6  1504.0\n",
+      "999  2025-01-14 12:45:00     10.6     10.6   10.57    10.6   401.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "a67750c31392422bb582ece2c30d8e20",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close  volume\n",
+      "995  2025-01-14 12:25:00  10.5124    10.56   10.51   10.56   670.0\n",
+      "996  2025-01-14 12:35:00  10.6012  10.6012  10.555  10.555   631.0\n",
+      "997  2025-01-14 12:40:00    10.59    10.61   10.59    10.6  1504.0\n",
+      "998  2025-01-14 12:45:00     10.6     10.6   10.57    10.6   401.0\n",
+      "999  2025-01-14 13:15:00    10.55    10.55   10.55   10.55   147.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "bc0cc6d26d6541dc83307179be343a9f",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close  volume\n",
+      "995  2025-01-14 12:35:00  10.6012  10.6012  10.555  10.555   631.0\n",
+      "996  2025-01-14 12:40:00    10.59    10.61   10.59    10.6  1504.0\n",
+      "997  2025-01-14 12:45:00     10.6     10.6   10.57    10.6   401.0\n",
+      "998  2025-01-14 13:15:00    10.55    10.55   10.55   10.55   147.0\n",
+      "999  2025-01-14 14:10:00    10.54    10.58   10.54   10.58   307.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "3addc39f768f4226bf25a3a631f6b32d",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low   close  volume\n",
+      "995  2025-01-14 12:40:00  10.59  10.61  10.59    10.6  1504.0\n",
+      "996  2025-01-14 12:45:00   10.6   10.6  10.57    10.6   401.0\n",
+      "997  2025-01-14 13:15:00  10.55  10.55  10.55   10.55   147.0\n",
+      "998  2025-01-14 14:10:00  10.54  10.58  10.54   10.58   307.0\n",
+      "999  2025-01-14 14:15:00  10.62  10.68  10.62  10.655  3016.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "0a9de4a353f14d2abf13a6281a7c68cd",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low   close  volume\n",
+      "995  2025-01-14 12:45:00   10.6   10.6  10.57    10.6   401.0\n",
+      "996  2025-01-14 13:15:00  10.55  10.55  10.55   10.55   147.0\n",
+      "997  2025-01-14 14:10:00  10.54  10.58  10.54   10.58   307.0\n",
+      "998  2025-01-14 14:15:00  10.62  10.68  10.62  10.655  3016.0\n",
+      "999  2025-01-14 15:00:00  10.59   10.6  10.59    10.6   325.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "9bef9792325c4a4aa8cb51e851dea117",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low   close  volume\n",
+      "995  2025-01-14 13:15:00  10.55  10.55  10.55   10.55   147.0\n",
+      "996  2025-01-14 14:10:00  10.54  10.58  10.54   10.58   307.0\n",
+      "997  2025-01-14 14:15:00  10.62  10.68  10.62  10.655  3016.0\n",
+      "998  2025-01-14 15:00:00  10.59   10.6  10.59    10.6   325.0\n",
+      "999  2025-01-14 15:20:00  10.63  10.63  10.63   10.63   523.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "7f29d4e0d81e421fbe9fab99ee4681fe",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low   close  volume\n",
+      "995  2025-01-14 14:10:00  10.54  10.58  10.54   10.58   307.0\n",
+      "996  2025-01-14 14:15:00  10.62  10.68  10.62  10.655  3016.0\n",
+      "997  2025-01-14 15:00:00  10.59   10.6  10.59    10.6   325.0\n",
+      "998  2025-01-14 15:20:00  10.63  10.63  10.63   10.63   523.0\n",
+      "999  2025-01-14 15:35:00   10.6  10.61  10.57   10.59  2302.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "2adf3e2da7bb464da5cf53aaebbf36f0",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low   close  volume\n",
+      "995  2025-01-14 14:15:00  10.62  10.68  10.62  10.655  3016.0\n",
+      "996  2025-01-14 15:00:00  10.59   10.6  10.59    10.6   325.0\n",
+      "997  2025-01-14 15:20:00  10.63  10.63  10.63   10.63   523.0\n",
+      "998  2025-01-14 15:35:00   10.6  10.61  10.57   10.59  2302.0\n",
+      "999  2025-01-14 15:40:00  10.55  10.63  10.55   10.57  1408.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "028b23372ecf416f8198165070f8b05f",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low  close  volume\n",
+      "995  2025-01-14 15:00:00  10.59   10.6  10.59   10.6   325.0\n",
+      "996  2025-01-14 15:20:00  10.63  10.63  10.63  10.63   523.0\n",
+      "997  2025-01-14 15:35:00   10.6  10.61  10.57  10.59  2302.0\n",
+      "998  2025-01-14 15:40:00  10.55  10.63  10.55  10.57  1408.0\n",
+      "999  2025-01-14 15:45:00  10.57  10.57  10.57  10.57   212.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "8115f0ca63534cbc8b42c8afc95dd8cd",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp    open    high     low  close  volume\n",
+      "995  2025-01-14 15:20:00   10.63   10.63   10.63  10.63   523.0\n",
+      "996  2025-01-14 15:35:00    10.6   10.61   10.57  10.59  2302.0\n",
+      "997  2025-01-14 15:40:00   10.55   10.63   10.55  10.57  1408.0\n",
+      "998  2025-01-14 15:45:00   10.57   10.57   10.57  10.57   212.0\n",
+      "999  2025-01-14 15:50:00  10.585  10.585  10.552  10.56   404.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "641bdfa203cc4033bb1ebb4fc3fb63d8",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp    open    high     low  close  volume\n",
+      "995  2025-01-14 15:35:00    10.6   10.61   10.57  10.59  2302.0\n",
+      "996  2025-01-14 15:40:00   10.55   10.63   10.55  10.57  1408.0\n",
+      "997  2025-01-14 15:45:00   10.57   10.57   10.57  10.57   212.0\n",
+      "998  2025-01-14 15:50:00  10.585  10.585  10.552  10.56   404.0\n",
+      "999  2025-01-14 15:55:00   10.67   10.67   10.62  10.62   513.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "ebb920e1ff684106b343e018410c4ab6",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp    open    high     low   close  volume\n",
+      "995  2025-01-14 15:40:00   10.55   10.63   10.55   10.57  1408.0\n",
+      "996  2025-01-14 15:45:00   10.57   10.57   10.57   10.57   212.0\n",
+      "997  2025-01-14 15:50:00  10.585  10.585  10.552   10.56   404.0\n",
+      "998  2025-01-14 15:55:00   10.67   10.67   10.62   10.62   513.0\n",
+      "999  2025-01-15 09:30:00   10.71  10.715   10.68  10.715  1867.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "d18198f87d3c42958d4ce38bda4850c9",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp    open    high     low   close  volume\n",
+      "995  2025-01-14 15:45:00   10.57   10.57   10.57   10.57   212.0\n",
+      "996  2025-01-14 15:50:00  10.585  10.585  10.552   10.56   404.0\n",
+      "997  2025-01-14 15:55:00   10.67   10.67   10.62   10.62   513.0\n",
+      "998  2025-01-15 09:30:00   10.71  10.715   10.68  10.715  1867.0\n",
+      "999  2025-01-15 09:35:00   10.85   10.85   10.74   10.74   603.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "a54875d146ae41df9305bbfcba7edf14",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "Retraining model at step 80...\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:40: FutureWarning: 'T' is deprecated and will be removed in a future version, please use 'min' instead.\n",
+      "  df = df.resample(freq_code).asfreq().fillna(method='ffill').reset_index()\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:40: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n",
+      "  df = df.resample(freq_code).asfreq().fillna(method='ffill').reset_index()\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:40: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  df = df.resample(freq_code).asfreq().fillna(method='ffill').reset_index()\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:84: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n",
+      "  df = transformed_series.pd_dataframe().fillna(method='ffill').fillna(method='bfill')\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n",
+      "\n",
+      "   | Name                              | Type                             | Params | Mode \n",
+      "------------------------------------------------------------------------------------------------\n",
+      "0  | train_metrics                     | MetricCollection                 | 0      | train\n",
+      "1  | val_metrics                       | MetricCollection                 | 0      | train\n",
+      "2  | input_embeddings                  | _MultiEmbedding                  | 0      | train\n",
+      "3  | static_covariates_vsn             | _VariableSelectionNetwork        | 0      | train\n",
+      "4  | encoder_vsn                       | _VariableSelectionNetwork        | 20.5 K | train\n",
+      "5  | decoder_vsn                       | _VariableSelectionNetwork        | 15.8 K | train\n",
+      "6  | static_context_grn                | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "7  | static_context_hidden_encoder_grn | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "8  | static_context_cell_encoder_grn   | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "9  | static_context_enrichment         | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "10 | lstm_encoder                      | LSTM                             | 4.8 K  | train\n",
+      "11 | lstm_decoder                      | LSTM                             | 4.8 K  | train\n",
+      "12 | post_lstm_gan                     | _GateAddNorm                     | 1.2 K  | train\n",
+      "13 | static_enrichment_grn             | _GatedResidualNetwork            | 3.0 K  | train\n",
+      "14 | multihead_attn                    | _InterpretableMultiHeadAttention | 1.8 K  | train\n",
+      "15 | post_attn_gan                     | _GateAddNorm                     | 1.2 K  | train\n",
+      "16 | feed_forward_block                | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "17 | pre_output_gan                    | _GateAddNorm                     | 1.2 K  | train\n",
+      "18 | output_layer                      | Linear                           | 425    | train\n",
+      "------------------------------------------------------------------------------------------------\n",
+      "66.9 K    Trainable params\n",
+      "0         Non-trainable params\n",
+      "66.9 K    Total params\n",
+      "0.268     Total estimated model params size (MB)\n",
+      "692       Modules in train mode\n",
+      "0         Modules in eval mode\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "e6cc9a6cc6c9406ab520f12093c7fe82",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Training: |                                                                                      | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "`Trainer.fit` stopped: `max_epochs=8` reached.\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "               timestamp    open    high     low   close  volume\n",
+      "995  2025-01-14 15:50:00  10.585  10.585  10.552   10.56   404.0\n",
+      "996  2025-01-14 15:55:00   10.67   10.67   10.62   10.62   513.0\n",
+      "997  2025-01-15 09:30:00   10.71  10.715   10.68  10.715  1867.0\n",
+      "998  2025-01-15 09:35:00   10.85   10.85   10.74   10.74   603.0\n",
+      "999  2025-01-15 10:00:00   10.74   10.74   10.74   10.74   174.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "2dc3ea104a214b429ac1c3976628116c",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open    high    low   close  volume\n",
+      "995  2025-01-14 15:55:00  10.67   10.67  10.62   10.62   513.0\n",
+      "996  2025-01-15 09:30:00  10.71  10.715  10.68  10.715  1867.0\n",
+      "997  2025-01-15 09:35:00  10.85   10.85  10.74   10.74   603.0\n",
+      "998  2025-01-15 10:00:00  10.74   10.74  10.74   10.74   174.0\n",
+      "999  2025-01-15 10:40:00  10.74   10.74  10.74   10.74   152.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "74ae644eaf034b4d9903a30ec872d340",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open    high    low   close  volume\n",
+      "995  2025-01-15 09:30:00  10.71  10.715  10.68  10.715  1867.0\n",
+      "996  2025-01-15 09:35:00  10.85   10.85  10.74   10.74   603.0\n",
+      "997  2025-01-15 10:00:00  10.74   10.74  10.74   10.74   174.0\n",
+      "998  2025-01-15 10:40:00  10.74   10.74  10.74   10.74   152.0\n",
+      "999  2025-01-15 10:55:00  10.72   10.72  10.63   10.63   583.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "9c2e46c0563a4b348abe0cc4ee7a6674",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low  close volume\n",
+      "995  2025-01-15 09:35:00  10.85  10.85  10.74  10.74  603.0\n",
+      "996  2025-01-15 10:00:00  10.74  10.74  10.74  10.74  174.0\n",
+      "997  2025-01-15 10:40:00  10.74  10.74  10.74  10.74  152.0\n",
+      "998  2025-01-15 10:55:00  10.72  10.72  10.63  10.63  583.0\n",
+      "999  2025-01-15 11:00:00  10.72  10.72  10.72  10.72  398.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "8327d2e21ce04895918e06eb135f2e78",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low  close volume\n",
+      "995  2025-01-15 10:00:00  10.74  10.74  10.74  10.74  174.0\n",
+      "996  2025-01-15 10:40:00  10.74  10.74  10.74  10.74  152.0\n",
+      "997  2025-01-15 10:55:00  10.72  10.72  10.63  10.63  583.0\n",
+      "998  2025-01-15 11:00:00  10.72  10.72  10.72  10.72  398.0\n",
+      "999  2025-01-15 11:20:00  10.69  10.69  10.69  10.69  106.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "40bc86a451284a789921da85f0e14e8b",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp    open   high     low  close volume\n",
+      "995  2025-01-15 10:40:00   10.74  10.74   10.74  10.74  152.0\n",
+      "996  2025-01-15 10:55:00   10.72  10.72   10.63  10.63  583.0\n",
+      "997  2025-01-15 11:00:00   10.72  10.72   10.72  10.72  398.0\n",
+      "998  2025-01-15 11:20:00   10.69  10.69   10.69  10.69  106.0\n",
+      "999  2025-01-15 11:25:00  10.685  10.75  10.685  10.75  634.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "bf75affec54349c292bd4e4de7678afd",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp    open   high     low  close volume\n",
+      "995  2025-01-15 10:55:00   10.72  10.72   10.63  10.63  583.0\n",
+      "996  2025-01-15 11:00:00   10.72  10.72   10.72  10.72  398.0\n",
+      "997  2025-01-15 11:20:00   10.69  10.69   10.69  10.69  106.0\n",
+      "998  2025-01-15 11:25:00  10.685  10.75  10.685  10.75  634.0\n",
+      "999  2025-01-15 11:30:00   10.75  10.75   10.75  10.75  214.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "18132b00c7074fbcbd7f87b139c5e3a3",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low  close  volume\n",
+      "995  2025-01-15 11:00:00    10.72    10.72   10.72  10.72   398.0\n",
+      "996  2025-01-15 11:20:00    10.69    10.69   10.69  10.69   106.0\n",
+      "997  2025-01-15 11:25:00   10.685    10.75  10.685  10.75   634.0\n",
+      "998  2025-01-15 11:30:00    10.75    10.75   10.75  10.75   214.0\n",
+      "999  2025-01-15 11:45:00  10.7676  10.7676   10.75  10.75  1228.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "e733ee8b78c54dbe939039721fd4f063",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low  close  volume\n",
+      "995  2025-01-15 11:20:00    10.69    10.69   10.69  10.69   106.0\n",
+      "996  2025-01-15 11:25:00   10.685    10.75  10.685  10.75   634.0\n",
+      "997  2025-01-15 11:30:00    10.75    10.75   10.75  10.75   214.0\n",
+      "998  2025-01-15 11:45:00  10.7676  10.7676   10.75  10.75  1228.0\n",
+      "999  2025-01-15 11:55:00     10.8     10.8    10.8   10.8   346.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "28c4c94968fb40a99570db9a20e40303",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low  close  volume\n",
+      "995  2025-01-15 11:25:00   10.685    10.75  10.685  10.75   634.0\n",
+      "996  2025-01-15 11:30:00    10.75    10.75   10.75  10.75   214.0\n",
+      "997  2025-01-15 11:45:00  10.7676  10.7676   10.75  10.75  1228.0\n",
+      "998  2025-01-15 11:55:00     10.8     10.8    10.8   10.8   346.0\n",
+      "999  2025-01-15 12:35:00     10.8     10.8   10.78  10.78   364.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "a597570ffec14f0ca02627e7c65287e6",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close  volume\n",
+      "995  2025-01-15 11:30:00    10.75    10.75    10.75    10.75   214.0\n",
+      "996  2025-01-15 11:45:00  10.7676  10.7676    10.75    10.75  1228.0\n",
+      "997  2025-01-15 11:55:00     10.8     10.8     10.8     10.8   346.0\n",
+      "998  2025-01-15 12:35:00     10.8     10.8    10.78    10.78   364.0\n",
+      "999  2025-01-15 13:15:00  10.8486  10.8486  10.8486  10.8486   288.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "b860a8032df6429caf4fdbd4b5613ce4",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close  volume\n",
+      "995  2025-01-15 11:45:00  10.7676  10.7676    10.75    10.75  1228.0\n",
+      "996  2025-01-15 11:55:00     10.8     10.8     10.8     10.8   346.0\n",
+      "997  2025-01-15 12:35:00     10.8     10.8    10.78    10.78   364.0\n",
+      "998  2025-01-15 13:15:00  10.8486  10.8486  10.8486  10.8486   288.0\n",
+      "999  2025-01-15 13:30:00    10.85    10.85    10.84    10.84   947.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "a5df576d834e48e9ba24eded7ca98f2c",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close volume\n",
+      "995  2025-01-15 11:55:00     10.8     10.8     10.8     10.8  346.0\n",
+      "996  2025-01-15 12:35:00     10.8     10.8    10.78    10.78  364.0\n",
+      "997  2025-01-15 13:15:00  10.8486  10.8486  10.8486  10.8486  288.0\n",
+      "998  2025-01-15 13:30:00    10.85    10.85    10.84    10.84  947.0\n",
+      "999  2025-01-15 13:45:00    10.92    10.92    10.92    10.92  109.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "c29ada739e934fdd9ee31fe7f198017a",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close volume\n",
+      "995  2025-01-15 12:35:00     10.8     10.8    10.78    10.78  364.0\n",
+      "996  2025-01-15 13:15:00  10.8486  10.8486  10.8486  10.8486  288.0\n",
+      "997  2025-01-15 13:30:00    10.85    10.85    10.84    10.84  947.0\n",
+      "998  2025-01-15 13:45:00    10.92    10.92    10.92    10.92  109.0\n",
+      "999  2025-01-15 13:50:00    10.92    10.92    10.92    10.92  136.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "2a76b413b8ce499f86d06f1bb7d6d8be",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.9139  13.9278  13.9417  13.9556\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close volume\n",
+      "995  2025-01-15 13:15:00  10.8486  10.8486  10.8486  10.8486  288.0\n",
+      "996  2025-01-15 13:30:00    10.85    10.85    10.84    10.84  947.0\n",
+      "997  2025-01-15 13:45:00    10.92    10.92    10.92    10.92  109.0\n",
+      "998  2025-01-15 13:50:00    10.92    10.92    10.92    10.92  136.0\n",
+      "999  2025-01-15 14:00:00    10.92    10.93    10.89    10.89  490.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "c5395defe6c94807a7b07962e8399eb9",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low  close volume\n",
+      "995  2025-01-15 13:30:00  10.85  10.85  10.84  10.84  947.0\n",
+      "996  2025-01-15 13:45:00  10.92  10.92  10.92  10.92  109.0\n",
+      "997  2025-01-15 13:50:00  10.92  10.92  10.92  10.92  136.0\n",
+      "998  2025-01-15 14:00:00  10.92  10.93  10.89  10.89  490.0\n",
+      "999  2025-01-15 14:10:00  10.95  10.95  10.95  10.95  299.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "6c73cf3b345f472ca2f8893d40b29e05",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low  close volume\n",
+      "995  2025-01-15 13:45:00  10.92  10.92  10.92  10.92  109.0\n",
+      "996  2025-01-15 13:50:00  10.92  10.92  10.92  10.92  136.0\n",
+      "997  2025-01-15 14:00:00  10.92  10.93  10.89  10.89  490.0\n",
+      "998  2025-01-15 14:10:00  10.95  10.95  10.95  10.95  299.0\n",
+      "999  2025-01-15 14:35:00  10.99  10.99  10.99  10.99  330.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "e957de6cb3544ca0879ce6bb4a50ff9f",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low  close volume\n",
+      "995  2025-01-15 13:50:00  10.92  10.92  10.92  10.92  136.0\n",
+      "996  2025-01-15 14:00:00  10.92  10.93  10.89  10.89  490.0\n",
+      "997  2025-01-15 14:10:00  10.95  10.95  10.95  10.95  299.0\n",
+      "998  2025-01-15 14:35:00  10.99  10.99  10.99  10.99  330.0\n",
+      "999  2025-01-15 14:55:00  10.98   11.0  10.98  10.98  750.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "538200dbba1248c8b250704424af1c77",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open   high    low  close volume\n",
+      "995  2025-01-15 14:00:00  10.92  10.93  10.89  10.89  490.0\n",
+      "996  2025-01-15 14:10:00  10.95  10.95  10.95  10.95  299.0\n",
+      "997  2025-01-15 14:35:00  10.99  10.99  10.99  10.99  330.0\n",
+      "998  2025-01-15 14:55:00  10.98   11.0  10.98  10.98  750.0\n",
+      "999  2025-01-15 15:05:00   10.9   10.9   10.9   10.9  101.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "b532d5b5df7b47ffa8cb0ed6e9b93550",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close volume\n",
+      "995  2025-01-15 14:10:00    10.95    10.95   10.95   10.95  299.0\n",
+      "996  2025-01-15 14:35:00    10.99    10.99   10.99   10.99  330.0\n",
+      "997  2025-01-15 14:55:00    10.98     11.0   10.98   10.98  750.0\n",
+      "998  2025-01-15 15:05:00     10.9     10.9    10.9    10.9  101.0\n",
+      "999  2025-01-15 15:15:00  11.0519  11.0519  10.975  10.975  414.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "768c38e1ca4149cd9024dfce003d35c3",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "Retraining model at step 100...\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:40: FutureWarning: 'T' is deprecated and will be removed in a future version, please use 'min' instead.\n",
+      "  df = df.resample(freq_code).asfreq().fillna(method='ffill').reset_index()\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:40: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n",
+      "  df = df.resample(freq_code).asfreq().fillna(method='ffill').reset_index()\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:40: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  df = df.resample(freq_code).asfreq().fillna(method='ffill').reset_index()\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:84: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n",
+      "  df = transformed_series.pd_dataframe().fillna(method='ffill').fillna(method='bfill')\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n",
+      "\n",
+      "   | Name                              | Type                             | Params | Mode \n",
+      "------------------------------------------------------------------------------------------------\n",
+      "0  | train_metrics                     | MetricCollection                 | 0      | train\n",
+      "1  | val_metrics                       | MetricCollection                 | 0      | train\n",
+      "2  | input_embeddings                  | _MultiEmbedding                  | 0      | train\n",
+      "3  | static_covariates_vsn             | _VariableSelectionNetwork        | 0      | train\n",
+      "4  | encoder_vsn                       | _VariableSelectionNetwork        | 20.5 K | train\n",
+      "5  | decoder_vsn                       | _VariableSelectionNetwork        | 15.8 K | train\n",
+      "6  | static_context_grn                | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "7  | static_context_hidden_encoder_grn | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "8  | static_context_cell_encoder_grn   | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "9  | static_context_enrichment         | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "10 | lstm_encoder                      | LSTM                             | 4.8 K  | train\n",
+      "11 | lstm_decoder                      | LSTM                             | 4.8 K  | train\n",
+      "12 | post_lstm_gan                     | _GateAddNorm                     | 1.2 K  | train\n",
+      "13 | static_enrichment_grn             | _GatedResidualNetwork            | 3.0 K  | train\n",
+      "14 | multihead_attn                    | _InterpretableMultiHeadAttention | 1.8 K  | train\n",
+      "15 | post_attn_gan                     | _GateAddNorm                     | 1.2 K  | train\n",
+      "16 | feed_forward_block                | _GatedResidualNetwork            | 2.4 K  | train\n",
+      "17 | pre_output_gan                    | _GateAddNorm                     | 1.2 K  | train\n",
+      "18 | output_layer                      | Linear                           | 425    | train\n",
+      "------------------------------------------------------------------------------------------------\n",
+      "66.9 K    Trainable params\n",
+      "0         Non-trainable params\n",
+      "66.9 K    Total params\n",
+      "0.268     Total estimated model params size (MB)\n",
+      "692       Modules in train mode\n",
+      "0         Modules in eval mode\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "b6c1975991a24db6aeb3cf3145ec816d",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Training: |                                                                                      | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "`Trainer.fit` stopped: `max_epochs=8` reached.\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "               timestamp     open     high     low   close volume\n",
+      "995  2025-01-15 14:35:00    10.99    10.99   10.99   10.99  330.0\n",
+      "996  2025-01-15 14:55:00    10.98     11.0   10.98   10.98  750.0\n",
+      "997  2025-01-15 15:05:00     10.9     10.9    10.9    10.9  101.0\n",
+      "998  2025-01-15 15:15:00  11.0519  11.0519  10.975  10.975  414.0\n",
+      "999  2025-01-15 15:20:00   10.936   10.936  10.936  10.936  513.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "46d394ae2eb64e0cb3c9d470e19d12f4",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close volume\n",
+      "995  2025-01-15 14:55:00    10.98     11.0   10.98   10.98  750.0\n",
+      "996  2025-01-15 15:05:00     10.9     10.9    10.9    10.9  101.0\n",
+      "997  2025-01-15 15:15:00  11.0519  11.0519  10.975  10.975  414.0\n",
+      "998  2025-01-15 15:20:00   10.936   10.936  10.936  10.936  513.0\n",
+      "999  2025-01-15 15:50:00     10.9     10.9    10.9    10.9  125.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "e2cb5b3d9b5046098a0e828596753982",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close volume\n",
+      "995  2025-01-15 15:05:00     10.9     10.9    10.9    10.9  101.0\n",
+      "996  2025-01-15 15:15:00  11.0519  11.0519  10.975  10.975  414.0\n",
+      "997  2025-01-15 15:20:00   10.936   10.936  10.936  10.936  513.0\n",
+      "998  2025-01-15 15:50:00     10.9     10.9    10.9    10.9  125.0\n",
+      "999  2025-01-15 15:55:00    10.96    10.96   10.91   10.96  460.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "8c9ea12846ab409ba010e2801176ebfe",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close  volume\n",
+      "995  2025-01-15 15:15:00  11.0519  11.0519  10.975  10.975   414.0\n",
+      "996  2025-01-15 15:20:00   10.936   10.936  10.936  10.936   513.0\n",
+      "997  2025-01-15 15:50:00     10.9     10.9    10.9    10.9   125.0\n",
+      "998  2025-01-15 15:55:00    10.96    10.96   10.91   10.96   460.0\n",
+      "999  2025-01-16 09:30:00    11.07    11.07   10.97  11.045  3325.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "75f20489bd7f49e38b5086e4bda0ef46",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open    high     low   close  volume\n",
+      "995  2025-01-15 15:20:00   10.936  10.936  10.936  10.936   513.0\n",
+      "996  2025-01-15 15:50:00     10.9    10.9    10.9    10.9   125.0\n",
+      "997  2025-01-15 15:55:00    10.96   10.96   10.91   10.96   460.0\n",
+      "998  2025-01-16 09:30:00    11.07   11.07   10.97  11.045  3325.0\n",
+      "999  2025-01-16 09:35:00  11.0245   11.06   10.98   11.06   478.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "fe4da4c9346e4f34988944f0482e7088",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open   high    low   close  volume\n",
+      "995  2025-01-15 15:50:00     10.9   10.9   10.9    10.9   125.0\n",
+      "996  2025-01-15 15:55:00    10.96  10.96  10.91   10.96   460.0\n",
+      "997  2025-01-16 09:30:00    11.07  11.07  10.97  11.045  3325.0\n",
+      "998  2025-01-16 09:35:00  11.0245  11.06  10.98   11.06   478.0\n",
+      "999  2025-01-16 09:45:00   11.035  11.06  10.93   10.93  1871.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "6898e59a03eb40008d738b34cee5777f",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1     2        3        4\n",
+      "forecast_values  13.9  13.8861  13.9  13.9139  13.9278\n",
+      "step 2\n",
+      "               timestamp     open   high    low   close  volume\n",
+      "995  2025-01-15 15:55:00    10.96  10.96  10.91   10.96   460.0\n",
+      "996  2025-01-16 09:30:00    11.07  11.07  10.97  11.045  3325.0\n",
+      "997  2025-01-16 09:35:00  11.0245  11.06  10.98   11.06   478.0\n",
+      "998  2025-01-16 09:45:00   11.035  11.06  10.93   10.93  1871.0\n",
+      "999  2025-01-16 10:55:00     11.0   11.0   11.0    11.0   578.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "ccd16a35748e47a0ba5199091edbec9d",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open   high     low   close  volume\n",
+      "995  2025-01-16 09:30:00    11.07  11.07   10.97  11.045  3325.0\n",
+      "996  2025-01-16 09:35:00  11.0245  11.06   10.98   11.06   478.0\n",
+      "997  2025-01-16 09:45:00   11.035  11.06   10.93   10.93  1871.0\n",
+      "998  2025-01-16 10:55:00     11.0   11.0    11.0    11.0   578.0\n",
+      "999  2025-01-16 11:00:00    11.11  11.13  11.085   11.12  1421.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "697d8faa32384e4d80b790f565c8e1df",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3     4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8861  13.9\n",
+      "step 2\n",
+      "               timestamp     open   high     low  close  volume\n",
+      "995  2025-01-16 09:35:00  11.0245  11.06   10.98  11.06   478.0\n",
+      "996  2025-01-16 09:45:00   11.035  11.06   10.93  10.93  1871.0\n",
+      "997  2025-01-16 10:55:00     11.0   11.0    11.0   11.0   578.0\n",
+      "998  2025-01-16 11:00:00    11.11  11.13  11.085  11.12  1421.0\n",
+      "999  2025-01-16 11:05:00    11.19   11.2   11.19   11.2   768.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "ca614fbd99b14d2e8185c055948708b8",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp    open   high     low  close  volume\n",
+      "995  2025-01-16 09:45:00  11.035  11.06   10.93  10.93  1871.0\n",
+      "996  2025-01-16 10:55:00    11.0   11.0    11.0   11.0   578.0\n",
+      "997  2025-01-16 11:00:00   11.11  11.13  11.085  11.12  1421.0\n",
+      "998  2025-01-16 11:05:00   11.19   11.2   11.19   11.2   768.0\n",
+      "999  2025-01-16 11:30:00   11.25  11.25   11.25  11.25   310.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "873842377e0e40efa9d2340d3ea3b516",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp   open     high     low    close  volume\n",
+      "995  2025-01-16 10:55:00   11.0     11.0    11.0     11.0   578.0\n",
+      "996  2025-01-16 11:00:00  11.11    11.13  11.085    11.12  1421.0\n",
+      "997  2025-01-16 11:05:00  11.19     11.2   11.19     11.2   768.0\n",
+      "998  2025-01-16 11:30:00  11.25    11.25   11.25    11.25   310.0\n",
+      "999  2025-01-16 11:45:00  11.29  11.3799   11.29  11.3392   845.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "302e08235e944fd48fbd0a3c4ede4005",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close  volume\n",
+      "995  2025-01-16 11:00:00    11.11    11.13   11.085    11.12  1421.0\n",
+      "996  2025-01-16 11:05:00    11.19     11.2    11.19     11.2   768.0\n",
+      "997  2025-01-16 11:30:00    11.25    11.25    11.25    11.25   310.0\n",
+      "998  2025-01-16 11:45:00    11.29  11.3799    11.29  11.3392   845.0\n",
+      "999  2025-01-16 11:55:00  11.2725  11.2725  11.2725  11.2725   439.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "2e8c17278dcb4449a5f6dc00a72fad66",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close volume\n",
+      "995  2025-01-16 11:05:00    11.19     11.2    11.19     11.2  768.0\n",
+      "996  2025-01-16 11:30:00    11.25    11.25    11.25    11.25  310.0\n",
+      "997  2025-01-16 11:45:00    11.29  11.3799    11.29  11.3392  845.0\n",
+      "998  2025-01-16 11:55:00  11.2725  11.2725  11.2725  11.2725  439.0\n",
+      "999  2025-01-16 12:20:00    11.24    11.24    11.24    11.24  222.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "fa6583769038400c99b1ee066ee1a4b6",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close  volume\n",
+      "995  2025-01-16 11:30:00    11.25    11.25    11.25    11.25   310.0\n",
+      "996  2025-01-16 11:45:00    11.29  11.3799    11.29  11.3392   845.0\n",
+      "997  2025-01-16 11:55:00  11.2725  11.2725  11.2725  11.2725   439.0\n",
+      "998  2025-01-16 12:20:00    11.24    11.24    11.24    11.24   222.0\n",
+      "999  2025-01-16 12:40:00  11.2656  11.2656     11.2     11.2  1433.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "74ccc12dee7748dd9357c1e489e2fc75",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close  volume\n",
+      "995  2025-01-16 11:45:00    11.29  11.3799    11.29  11.3392   845.0\n",
+      "996  2025-01-16 11:55:00  11.2725  11.2725  11.2725  11.2725   439.0\n",
+      "997  2025-01-16 12:20:00    11.24    11.24    11.24    11.24   222.0\n",
+      "998  2025-01-16 12:40:00  11.2656  11.2656     11.2     11.2  1433.0\n",
+      "999  2025-01-16 12:45:00   11.205   11.205   11.205   11.205   235.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n",
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "263ac527984e49dc8a33403d523db3a5",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close  volume\n",
+      "995  2025-01-16 11:55:00  11.2725  11.2725  11.2725  11.2725   439.0\n",
+      "996  2025-01-16 12:20:00    11.24    11.24    11.24    11.24   222.0\n",
+      "997  2025-01-16 12:40:00  11.2656  11.2656     11.2     11.2  1433.0\n",
+      "998  2025-01-16 12:45:00   11.205   11.205   11.205   11.205   235.0\n",
+      "999  2025-01-16 13:00:00    11.15    11.16    11.15    11.16   662.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "9a1ff80c875f4e4a80f500ccbb515999",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high     low   close  volume\n",
+      "995  2025-01-16 12:20:00    11.24    11.24   11.24   11.24   222.0\n",
+      "996  2025-01-16 12:40:00  11.2656  11.2656    11.2    11.2  1433.0\n",
+      "997  2025-01-16 12:45:00   11.205   11.205  11.205  11.205   235.0\n",
+      "998  2025-01-16 13:00:00    11.15    11.16   11.15   11.16   662.0\n",
+      "999  2025-01-16 13:05:00    11.18    11.22   11.17   11.22   631.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "1eb44e83846848fc83c04c29ecfe7c54",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close  volume\n",
+      "995  2025-01-16 12:40:00  11.2656  11.2656     11.2     11.2  1433.0\n",
+      "996  2025-01-16 12:45:00   11.205   11.205   11.205   11.205   235.0\n",
+      "997  2025-01-16 13:00:00    11.15    11.16    11.15    11.16   662.0\n",
+      "998  2025-01-16 13:05:00    11.18    11.22    11.17    11.22   631.0\n",
+      "999  2025-01-16 13:20:00  11.2119  11.2119  11.2119  11.2119   235.0\n",
+      "step 1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "TPU available: False, using: 0 TPU cores\n",
+      "HPU available: False, using: 0 HPUs\n"
+     ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "777073a91ad2494e974186c355d33ff0",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "Predicting: |                                                                                    | 0/? [00:00<…"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:159: FutureWarning: The default fill_method='pad' in Series.pct_change is deprecated and will be removed in a future version. Either fill in any non-leading NA values prior to calling pct_change or specify 'fill_method=None' to not fill NA values.\n",
+      "  forecast_pct = pd.Series(forecast_values).pct_change().fillna(0).cumsum() #forecasted value\n",
+      "C:\\Users\\david\\AppData\\Local\\Temp\\ipykernel_16240\\223882070.py:160: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`\n",
+      "  real_pct = n_df['close'].pct_change().fillna(0).cumsum()\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "C:\\Users\\david\\AppData\\Local\\anaconda3\\envs\\tws_env\\lib\\site-packages\\pandas\\core\\arraylike.py:399: RuntimeWarning: invalid value encountered in maximum\n",
+      "  result = getattr(ufunc, method)(*inputs, **kwargs)\n",
+      "GPU available: False, used: False\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "                    0        1        2        3        4\n",
+      "forecast_values  13.9  13.8861  13.8722  13.8583  13.8444\n",
+      "step 2\n",
+      "               timestamp     open     high      low    close volume\n",
+      "995  2025-01-16 12:45:00   11.205   11.205   11.205   11.205  235.0\n",
+      "996  2025-01-16 13:00:00    11.15    11.16    11.15    11.16  662.0\n",
+      "997  2025-01-16 13:05:00    11.18    11.22    11.17    11.22  631.0\n",
+      "998  2025-01-16 13:20:00  11.2119  11.2119  11.2119  11.2119  235.0\n",
+      "999  2025-01-16 13:50:00    11.24    11.2

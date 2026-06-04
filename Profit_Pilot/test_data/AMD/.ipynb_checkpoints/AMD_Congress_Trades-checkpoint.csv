@@ -1,0 +1,83 @@
+Stock,Transaction Type,Transaction Amount,Politician Name,Politician Position,Filed Date,Traded Date,Description
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 21, 2025",-
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 08, 2025",-
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 08, 2025",-
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 08, 2025",-
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 08, 2025",-
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Nov. 27, 2024","Nov. 25, 2024",-
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Nov. 04, 2024","Nov. 01, 2024",-
+AMD,Sale,"$1,001 - $15,000",John James,House / R,"Sep. 06, 2024","Sep. 04, 2024",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Sep. 11, 2024","Aug. 06, 2024",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Sep. 11, 2024","Aug. 01, 2024",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 15, 2024","Jul. 31, 2024",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 15, 2024","Jul. 19, 2024",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jul. 09, 2024","Jun. 18, 2024",-
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"May. 21, 2024","May. 21, 2024",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 07, 2024","Mar. 18, 2024",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 07, 2024","Mar. 15, 2024",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 07, 2024","Feb. 22, 2024",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 15, 2024","Jan. 24, 2024",-
+AMD,Sale (Full),"$15,001 - $50,000","Tuberville, Tommy",Senate / R,"Feb. 14, 2024","Jan. 19, 2024",-
+AMD,Purchase,"$15,001 - $50,000","Mullin, Markwayne",Senate / R,"Jan. 26, 2024","Jan. 02, 2024",-
+AMD,Sale,"$1,001 - $15,000",Michael C. Burgess,House / R,"Jan. 22, 2024","Jan. 02, 2024",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jan. 07, 2024","Dec. 20, 2023",-
+AMD,Sale,"$1,001 - $15,000",John Curtis,House / R,"Dec. 15, 2023","Dec. 04, 2023",-
+AMD,Purchase,"$1,001 - $15,000",John James,House / R,"Sep. 02, 2024","Nov. 10, 2023",-
+AMD,Sale,"$1,001 - $15,000",HON. GREG STANTON,House / D,"Nov. 09, 2023","Oct. 24, 2023",-
+AMD,Purchase,"$1,001 - $15,000","Mullin, Markwayne",Senate / R,"Nov. 01, 2023","Oct. 03, 2023",-
+AMD,Purchase,"$1,001 - $15,000",HON. GREG STANTON,House / D,"Nov. 09, 2023","Sep. 26, 2023",-
+AMD,Purchase,"$15,001 - $50,000","Mullin, Markwayne",Senate / R,"Oct. 12, 2023","Sep. 13, 2023",-
+AMD,Purchase,"$1,001 - $15,000",Michael C. Burgess,House / R,"Sep. 06, 2023","Aug. 09, 2023",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 21, 2023","Jul. 24, 2023",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jul. 11, 2023","Jun. 22, 2023",-
+AMD,Sale,"$1,001 - $15,000",John Curtis,House / R,"Aug. 07, 2023","Jun. 21, 2023",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 11, 2023","May. 01, 2023",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"May. 19, 2023","Apr. 28, 2023",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 17, 2023","Feb. 23, 2023",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 17, 2023","Feb. 17, 2023",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 17, 2023","Feb. 13, 2023",-
+AMD,Purchase,"$1,001 - $15,000",John Curtis,House / R,"Jan. 10, 2023","Dec. 20, 2022",-
+AMD,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"May. 20, 2022","Mar. 04, 2022",-
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Mar. 07, 2022","Feb. 22, 2022",-
+AMD,Exchange,"$1,001 - $15,000",Christopher L. Jacobs,House / R,"Mar. 18, 2022","Feb. 15, 2022",SHARES OF ADVANCED MICRO DEVICES INC. RECEIVED IN EXCHANGE FOR XILINX INC. SHARES FOLLOWING MERGER.
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 18, 2022","Jan. 31, 2022",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 18, 2022","Jan. 26, 2022",-
+AMD,Sale,"$50,001 - $100,000",Thomas Suozzi,House / D,"Dec. 01, 2021","Nov. 18, 2021",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 15, 2021","Oct. 05, 2021",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Sep. 20, 2021","Aug. 04, 2021",-
+AMD,Purchase,"$1,001 - $15,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jul. 28, 2021",-
+AMD,Purchase,"$1,001 - $15,000",John Curtis,House / R,"Aug. 06, 2021","Jul. 19, 2021",-
+AMD,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jun. 30, 2021",-
+AMD,Purchase,"$1,001 - $15,000",John Curtis,House / R,"Jul. 06, 2021","Jun. 22, 2021",-
+AMD,Sale,"$1,001 - $15,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jun. 04, 2021",-
+AMD,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jun. 17, 2021","May. 19, 2021",-
+AMD,Purchase,"$15,001 - $50,000",Deborah K. Ross,House / D,"Apr. 30, 2021","Apr. 27, 2021",-
+AMD,Sale,"$1,001 - $15,000",Mr. Peter Meijer,House / R,"Mar. 16, 2021","Feb. 16, 2021",-
+AMD,Purchase,"$1,001 - $15,000",Mrs. Marjorie Taylor Greene,House / R,"Feb. 19, 2021","Jan. 21, 2021",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 09, 2020","Nov. 16, 2020",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 09, 2020","Nov. 11, 2020",-
+AMD,Purchase,"$1,001 - $15,000",Dean Phillips,House / D,"Oct. 09, 2020","Sep. 23, 2020",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Oct. 13, 2020","Sep. 14, 2020",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Sep. 20, 2020","Aug. 03, 2020",-
+AMD,Sale,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jun. 03, 2020",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 10, 2020","May. 15, 2020",-
+AMD,Sale,"$1,001 - $15,000",Roger W. Marshall,House / R,"Jun. 03, 2020","May. 12, 2020",-
+AMD,Purchase,"$1,001 - $15,000",Roger W. Marshall,House / R,"Jun. 03, 2020","May. 04, 2020",-
+AMD,Purchase,"$1,001 - $15,000",Dean Phillips,House / D,"May. 07, 2020","Apr. 02, 2020",-
+AMD,Purchase,"$1,001 - $15,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Mar. 03, 2020",-
+AMD,Sale,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Nov. 18, 2019",-
+AMD,Sale,"$50,001 - $100,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Oct. 17, 2019",-
+AMD,Sale,"$1,001 - $15,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Jul. 30, 2019",-
+AMD,Sale,"$1,001 - $15,000",Donna Shalala,House / D,"Apr. 27, 2020","Jun. 24, 2019",-
+AMD,Sale,"$1,001 - $15,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Jun. 18, 2019",-
+AMD,Sale,"$15,001 - $50,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Mar. 05, 2019",-
+AMD,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jan. 29, 2019",-
+AMD,Purchase,"$1,001 - $15,000",Donna Shalala,House / D,"Apr. 27, 2020","Jan. 23, 2019",-
+AMD,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Jan. 08, 2019",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 13, 2018","Nov. 05, 2018",-
+AMD,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 16, 2018","Oct. 26, 2018",-
+AMD,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 16, 2018","Oct. 02, 2018",-
+AMD,Purchase,"$1,001 - $15,000",Brenda Lulenar Lawrence,House / D,"Aug. 21, 2019","Sep. 10, 2018",-
+AMD,Purchase,"$1,001 - $15,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Dec. 06, 2017",-
+AMD,Sale,"$1,001 - $15,000",Roger W. Marshall,House / R,"Aug. 06, 2018","Oct. 30, 2017",-
+AMD,Purchase,"$1,001 - $15,000",Roger W. Marshall,House / R,"Aug. 06, 2018","Oct. 27, 2017",-

@@ -1,0 +1,231 @@
+Stock,Transaction Type,Transaction Amount,Politician Name,Politician Position,Filed Date,Traded Date,Description
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 10, 2025","Jan. 31, 2025",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 10, 2025","Jan. 30, 2025",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 10, 2025","Jan. 28, 2025",-
+TSLA,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 08, 2025",-
+TSLA,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 08, 2025",-
+TSLA,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 08, 2025",-
+TSLA,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 08, 2025",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jan. 14, 2025","Dec. 03, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 05, 2024","Nov. 27, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 05, 2024","Nov. 26, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 05, 2024","Nov. 20, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 05, 2024","Nov. 14, 2024",-
+TSLA,Sale,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Dec. 10, 2024","Nov. 13, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 05, 2024","Nov. 12, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 05, 2024","Nov. 11, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Michael Patrick Guest,House / R,"Dec. 20, 2024","Nov. 08, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Nov. 08, 2024","Nov. 07, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Nov. 04, 2024","Nov. 01, 2024",-
+TSLA,Sale (Full),"$100,001 - $250,000","Whitehouse, Sheldon",Senate / D,"Nov. 07, 2024","Oct. 28, 2024",-
+TSLA,Sale (Full),"$15,001 - $50,000","Whitehouse, Sheldon",Senate / D,"Nov. 07, 2024","Oct. 28, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Nov. 13, 2024","Oct. 25, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Oct. 22, 2024","Oct. 21, 2024",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 06, 2024","Oct. 14, 2024",-
+TSLA,Sale (Partial),"$15,001 - $50,000","Whitehouse, Sheldon",Senate / D,"Nov. 07, 2024","Oct. 11, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Sep. 04, 2024","Sep. 03, 2024",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Sep. 11, 2024","Aug. 28, 2024",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 15, 2024","Jul. 29, 2024",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 15, 2024","Jul. 24, 2024",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 15, 2024","Jul. 01, 2024",-
+TSLA,Sale,"$250,001 - $500,000",Nancy Pelosi,House / D,"Jul. 02, 2024","Jun. 24, 2024","SOLD 2,500 SHARES."
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 08, 2024","May. 01, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"May. 15, 2024","Apr. 29, 2024",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"May. 15, 2024","Apr. 24, 2024",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 07, 2024","Mar. 15, 2024",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 15, 2024","Jan. 25, 2024",-
+TSLA,Sale,"$1,001 - $15,000",HON. GREG STANTON,House / D,"Nov. 09, 2023","Oct. 24, 2023",-
+TSLA,Purchase,"$1,001 - $15,000","Tuberville, Tommy",Senate / R,"Nov. 16, 2023","Oct. 17, 2023",Option Type: Put Strike price: $190.00  Expires: 12/15/2023
+TSLA,Purchase,"$1,001 - $15,000","Tuberville, Tommy",Senate / R,"Nov. 16, 2023","Oct. 17, 2023",Option Type: Put Strike price: $190.00  Expires: 12/15/2023
+TSLA,Sale (Full),"$1,001 - $15,000","Tuberville, Tommy",Senate / R,"Nov. 16, 2023","Oct. 17, 2023",-
+TSLA,Purchase,"$1,001 - $15,000","Tuberville, Tommy",Senate / R,"Nov. 16, 2023","Oct. 17, 2023",Option Type: Put Strike price: $190.00  Expires: 12/15/2023
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 11, 2023","Oct. 11, 2023",-
+TSLA,Purchase,"$1,001 - $15,000",HON. GREG STANTON,House / D,"Nov. 09, 2023","Sep. 26, 2023",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Oct. 15, 2023","Sep. 22, 2023",-
+TSLA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Oct. 17, 2023","Sep. 20, 2023",-
+TSLA,Purchase,"$1,001 - $15,000",Michael Patrick Guest,House / R,"Aug. 23, 2023","Aug. 07, 2023",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 21, 2023","Jul. 18, 2023",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 21, 2023","Jul. 13, 2023",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jul. 11, 2023","Jun. 22, 2023",-
+TSLA,Sale (Partial),"$1,001 - $15,000","Tuberville, Tommy",Senate / R,"Jul. 14, 2023","Jun. 13, 2023",Option Type: Put Strike price: $190.00  Expires: 12/15/2023
+TSLA,Sale,"$50,001 - $100,000",Michael Garcia,House / R,"Jun. 20, 2023","Jun. 12, 2023",-
+TSLA,Sale,"$15,001 - $50,000",Michael Garcia,House / R,"Jun. 20, 2023","Jun. 08, 2023",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 11, 2023","May. 19, 2023",-
+TSLA,Purchase,"$15,001 - $50,000",Daniel Goldman,House / D,"May. 19, 2023","Apr. 10, 2023",-
+TSLA,Purchase,"$1,001 - $15,000",Daniel Goldman,House / D,"May. 19, 2023","Apr. 10, 2023",-
+TSLA,Sale (Partial),"$15,001 - $50,000","Tuberville, Tommy",Senate / R,"May. 11, 2023","Apr. 04, 2023",Option Type: Put Strike price: $190.00  Expires: 12/15/2023
+TSLA,Purchase,"$1,001 - $15,000","Tuberville, Tommy",Senate / R,"May. 11, 2023","Apr. 03, 2023",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 20, 2023","Mar. 24, 2023",-
+TSLA,Purchase,"$1,001 - $15,000",Dan Newhouse,House / R,"May. 26, 2023","Mar. 17, 2023",-
+TSLA,Purchase,"$100,001 - $250,000",Daniel Goldman,House / D,"Apr. 17, 2023","Mar. 06, 2023",-
+TSLA,Purchase,"$15,001 - $50,000",Daniel Goldman,House / D,"Apr. 17, 2023","Mar. 01, 2023",-
+TSLA,Purchase,"$15,001 - $50,000",Daniel Goldman,House / D,"Mar. 20, 2023","Feb. 03, 2023",-
+TSLA,Sale,"$100,001 - $250,000",Daniel Goldman,House / D,"Feb. 24, 2023","Jan. 31, 2023",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 17, 2023","Jan. 27, 2023",-
+TSLA,Sale,"$1,001 - $15,000",Shri Thanedar,House / D,"Feb. 09, 2023","Jan. 23, 2023",-
+TSLA,Sale,"$1,001 - $15,000",Shri Thanedar,House / D,"Feb. 09, 2023","Jan. 23, 2023",-
+TSLA,Sale,"$15,001 - $50,000",Michael Garcia,House / R,"Jan. 26, 2023","Dec. 20, 2022",-
+TSLA,Sale,"$500,001 - $1,000,000",Nancy Pelosi,House / D,"Jan. 12, 2023","Dec. 20, 2022","SOLD 5,000 SHARES."
+TSLA,Sale,"$1,001 - $15,000",Christopher L. Jacobs,House / R,"Jan. 20, 2023","Dec. 12, 2022",-
+TSLA,Sale,"$1,001 - $15,000",Robert B. Aderholt,House / R,"Dec. 13, 2022","Dec. 05, 2022",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 17, 2022","Nov. 09, 2022",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 17, 2022","Nov. 02, 2022",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 10, 2022","Oct. 21, 2022",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 10, 2022","Oct. 17, 2022",-
+TSLA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Nov. 10, 2022","Oct. 12, 2022",-
+TSLA,Purchase,"$50,001 - $100,000",Michael Garcia,House / R,"Oct. 25, 2022","Sep. 29, 2022",-
+TSLA,Purchase,"$1,001 - $15,000",David B. Mckinley,House / R,"Oct. 12, 2022","Sep. 21, 2022",-
+TSLA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Oct. 11, 2022","Sep. 12, 2022",-
+TSLA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Sep. 14, 2022","Aug. 05, 2022",-
+TSLA,Sale,"$50,001 - $100,000",Shri Thanedar,House / D,"Feb. 09, 2023","Aug. 01, 2022",-
+TSLA,Purchase,"$1,001 - $15,000",Christopher L. Jacobs,House / R,"Sep. 09, 2022","Jul. 18, 2022",-
+TSLA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Aug. 10, 2022","Jul. 15, 2022",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 16, 2022","May. 26, 2022",-
+TSLA,Sale,"$250,001 - $500,000",Kim Dr Schrier,House / D,"Apr. 21, 2022","Mar. 22, 2022",BACKGROUND INFORMATION: THE HOLDINGS OF GOWING FAMILY TRUST SECONDARY ACCOUNT WERE CONSOLIDATED INTO THE
+TSLA,Sale,"$250,001 - $500,000",Kim Dr Schrier,House / D,"Apr. 21, 2022","Mar. 22, 2022",-
+TSLA,Purchase,"$1,000,001 - $5,000,000",Nancy Pelosi,House / D,"Mar. 21, 2022","Mar. 17, 2022","EXERCISED 25 CALL OPTIONS (2,500 SHARES) EXPIRING 3/18/22 AT A STRIKE PRICE OF $500."
+TSLA,Purchase,"$15,001 - $50,000",Michael Garcia,House / R,"Feb. 23, 2022","Feb. 23, 2022",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 18, 2022","Feb. 07, 2022",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 18, 2022","Jan. 31, 2022",-
+TSLA,Purchase,"$15,001 - $50,000","Whitehouse, Sheldon",Senate / D,"Mar. 16, 2022","Jan. 28, 2022",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 18, 2022","Jan. 26, 2022",-
+TSLA,Purchase,"$15,001 - $50,000",Michael Garcia,House / R,"Feb. 23, 2022","Jan. 25, 2022",-
+TSLA,Sale,"$1,001 - $15,000",Daniel Crenshaw,House / R,"Jan. 10, 2022","Dec. 29, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Daniel Crenshaw,House / R,"Dec. 07, 2021","Nov. 16, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Daniel Crenshaw,House / R,"Dec. 07, 2021","Nov. 12, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Daniel Crenshaw,House / R,"Dec. 07, 2021","Nov. 12, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Daniel Crenshaw,House / R,"Dec. 07, 2021","Nov. 09, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Daniel Crenshaw,House / R,"Dec. 07, 2021","Nov. 08, 2021",-
+TSLA,Sale,"$15,001 - $50,000",Michael Garcia,House / R,"Oct. 26, 2021","Oct. 25, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 15, 2021","Oct. 19, 2021",-
+TSLA,Sale,"$15,001 - $50,000",Michael Garcia,House / R,"Oct. 26, 2021","Oct. 04, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Blake Moore,House / R,"Sep. 24, 2021","Aug. 18, 2021",PUT TSLA OCT 15 21 500.0 P NOT PART OF A COMPENSATION PACKAGE OR ESOP
+TSLA,Sale,"$1,001 - $15,000",Blake Moore,House / R,"Sep. 24, 2021","Aug. 18, 2021",PUT TSLA OCT 15 21 510.0 P NOT PART OF A COMPENSATION PACKAGE OR ESOP
+TSLA,Purchase,"$1,001 - $15,000",Marie Newman,House / D,"Sep. 08, 2021","Aug. 02, 2021",CALL
+TSLA,Sale,"$50,001 - $100,000",Marie Newman,House / D,"Sep. 08, 2021","Aug. 02, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Aug. 05, 2021","Jul. 19, 2021",CALL
+TSLA,Purchase,"$50,001 - $100,000",Marie Newman,House / D,"Aug. 05, 2021","Jul. 06, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Aug. 05, 2021","Jul. 06, 2021",CALL
+TSLA,Sale,"$50,001 - $100,000",Marie Newman,House / D,"Aug. 05, 2021","Jul. 02, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Jul. 09, 2021","Jun. 18, 2021",CALL
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jul. 15, 2021","Jun. 04, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Jul. 09, 2021","Jun. 02, 2021",CALL
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Jun. 10, 2021","Apr. 30, 2021",CALL
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"May. 07, 2021","Apr. 30, 2021",-
+TSLA,Purchase,"$50,001 - $100,000",Marie Newman,House / D,"Jun. 10, 2021","Apr. 30, 2021",-
+TSLA,Purchase,"$15,001 - $50,000",Michael Garcia,House / R,"May. 03, 2021","Apr. 28, 2021",-
+TSLA,Sale,"$50,001 - $100,000",Marie Newman,House / D,"May. 09, 2021","Apr. 22, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Marie Newman,House / D,"May. 09, 2021","Apr. 22, 2021",CALL
+TSLA,Purchase,"$50,001 - $100,000",Marie Newman,House / D,"May. 09, 2021","Apr. 19, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"May. 09, 2021","Apr. 19, 2021",CALL
+TSLA,Purchase,"$15,001 - $50,000",Michael Garcia,House / R,"May. 03, 2021","Apr. 12, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",James French Hill,House / R,"Apr. 27, 2021","Apr. 08, 2021",6 SHARES TSLA
+TSLA,Sale,"$50,001 - $100,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Apr. 07, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"May. 07, 2021","Apr. 05, 2021",-
+TSLA,Sale,"$50,001 - $100,000",Marie Newman,House / D,"May. 09, 2021","Apr. 01, 2021",-
+TSLA,Sale,"$50,001 - $100,000",Marie Newman,House / D,"May. 09, 2021","Apr. 01, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Ashley Hinson Arenholz,House / R,"Apr. 05, 2021","Mar. 31, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Apr. 15, 2021","Mar. 29, 2021",-
+TSLA,Purchase,"$50,001 - $100,000",Marie Newman,House / D,"Apr. 15, 2021","Mar. 29, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Elaine Luria,House / D,"Apr. 13, 2021","Mar. 22, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 21, 2021","Mar. 22, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Apr. 15, 2021","Mar. 22, 2021",CALL
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 21, 2021","Mar. 15, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 21, 2021","Mar. 10, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Ashley Hinson Arenholz,House / R,"Apr. 05, 2021","Mar. 04, 2021",-
+TSLA,Purchase,"$50,001 - $100,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Mar. 02, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Apr. 15, 2021","Mar. 01, 2021",CALL
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Apr. 15, 2021","Feb. 19, 2021",CALL
+TSLA,Purchase,"$1,001 - $15,000",Marie Newman,House / D,"Apr. 15, 2021","Feb. 19, 2021",CALL
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Apr. 15, 2021","Feb. 17, 2021",CALL
+TSLA,Sale,"$15,001 - $50,000",Mr. Peter Meijer,House / R,"Mar. 16, 2021","Feb. 16, 2021",-
+TSLA,Purchase,"$50,001 - $100,000",Marie Newman,House / D,"Apr. 15, 2021","Feb. 11, 2021",-
+TSLA,Sale,"$1,001 - $15,000",Marie Newman,House / D,"Apr. 15, 2021","Feb. 11, 2021",CALL
+TSLA,Sale,"$1,001 - $15,000",Mr. Peter Meijer,House / R,"Feb. 23, 2021","Jan. 28, 2021",-
+TSLA,Sale (Full),"$1,001 - $15,000","Toomey, Pat",Senate / R,"Feb. 08, 2021","Jan. 27, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Mrs. Marjorie Taylor Greene,House / R,"Feb. 19, 2021","Jan. 22, 2021",-
+TSLA,Purchase,"$1,001 - $15,000",Dean Phillips,House / D,"Feb. 13, 2021","Jan. 05, 2021",-
+TSLA,Purchase,"$1,001 - $15,000","Carper, Thomas R.",Senate / D,"Jan. 07, 2021","Dec. 30, 2020",-
+TSLA,Sale (Partial),"$1,001 - $15,000","Toomey, Patrick",Senate / R,"Jan. 08, 2021","Dec. 22, 2020",-
+TSLA,Purchase,"$50,001 - $100,000",Gilbert Cisneros,House / D,"Jan. 11, 2021","Dec. 22, 2020",-
+TSLA,Purchase,"$500,001 - $1,000,000",Nancy Pelosi,House / D,"Jan. 21, 2021","Dec. 22, 2020",PURCHASED 25 CALL OPTIONS WITH A STRIKE PRICE OF $500 AND AN EXPIRATION DATE OF 3/18/22.
+TSLA,Sale (Full),"$1,001 - $15,000","Roberts, Pat",Senate / R,"Dec. 31, 2020","Dec. 21, 2020",-
+TSLA,Purchase,"$50,001 - $100,000",Dean Phillips,House / D,"Jan. 09, 2021","Dec. 18, 2020",-
+TSLA,Purchase,"$1,001 - $15,000","Roberts, Pat",Senate / R,"Dec. 31, 2020","Dec. 11, 2020",-
+TSLA,Purchase,"$1,001 - $15,000","Roberts, Pat",Senate / R,"Dec. 31, 2020","Dec. 07, 2020",-
+TSLA,Sale,"$50,001 - $100,000",Michael Garcia,House / R,"Dec. 21, 2020","Dec. 07, 2020",-
+TSLA,Sale,"$15,001 - $50,000",Michael Garcia,House / R,"Dec. 02, 2020","Nov. 25, 2020",-
+TSLA,Sale,"$15,001 - $50,000",Michael Garcia,House / R,"Nov. 23, 2020","Nov. 23, 2020",-
+TSLA,Purchase,"$15,001 - $50,000",Michael Garcia,House / R,"Nov. 23, 2020","Nov. 17, 2020",-
+TSLA,Sale,"$15,001 - $50,000",Michael Garcia,House / R,"Nov. 23, 2020","Nov. 16, 2020",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 09, 2020","Nov. 16, 2020",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 09, 2020","Nov. 13, 2020",-
+TSLA,Purchase,"$15,001 - $50,000",Michael Garcia,House / R,"Nov. 23, 2020","Nov. 13, 2020",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 09, 2020","Nov. 06, 2020",-
+TSLA,Purchase,"$1,001 - $15,000",Dwight Evans,House / D,"Dec. 03, 2020","Oct. 29, 2020",-
+TSLA,Purchase,"$1,001 - $15,000",Michael Garcia,House / R,"Nov. 23, 2020","Oct. 26, 2020",-
+TSLA,Purchase,"$1,001 - $15,000",Dwight Evans,House / D,"Sep. 21, 2020","Sep. 04, 2020",-
+TSLA,Purchase,"$15,001 - $50,000",Michael Garcia,House / R,"Nov. 23, 2020","Sep. 04, 2020",-
+TSLA,Sale (Full),"$50,001 - $100,000","Roberts, Pat",Senate / R,"Sep. 30, 2020","Sep. 01, 2020",-
+TSLA,Purchase,"$1,001 - $15,000","Toomey, Pat",Senate / R,"Sep. 11, 2020","Aug. 28, 2020",-
+TSLA,Purchase,"$50,001 - $100,000","Roberts, Pat",Senate / R,"Aug. 30, 2020","Aug. 03, 2020",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 10, 2020","Jul. 14, 2020",-
+TSLA,Sale,"$15,001 - $50,000",Thomas Massie,House / R,"Jul. 16, 2020","Jul. 14, 2020",-
+TSLA,Purchase,"$1,001 - $15,000","Toomey, Patrick",Senate / R,"Aug. 06, 2020","Jul. 07, 2020",-
+TSLA,Sale (Full),"$1,001 - $15,000","Toomey, Patrick",Senate / R,"Aug. 06, 2020","Jul. 07, 2020",-
+TSLA,Sale,"$1,001 - $15,000",Michael Garcia,House / R,"Jun. 17, 2020","Jun. 03, 2020",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 10, 2020","May. 22, 2020",-
+TSLA,Sale,"$1,001 - $15,000",Michael Garcia,House / R,"Jun. 17, 2020","May. 21, 2020",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"May. 13, 2020","Apr. 17, 2020",-
+TSLA,Sale,"$100,001 - $250,000",Kim Schrier,House / D,"Mar. 08, 2020","Mar. 03, 2020",-
+TSLA,Sale,"$100,001 - $250,000",Kim Schrier,House / D,"Mar. 08, 2020","Mar. 03, 2020",-
+TSLA,Purchase,"$1,001 - $15,000",Harley E. Rouda Jr.,House / D,"Apr. 01, 2020","Feb. 20, 2020",-
+TSLA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 09, 2020","Nov. 11, 2019",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 09, 2019","Nov. 07, 2019",-
+TSLA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 08, 2019","Oct. 28, 2019",-
+TSLA,Sale (Full),"$15,001 - $50,000","Whitehouse, Sheldon",Senate / D,"Oct. 08, 2019","Aug. 27, 2019",-
+TSLA,Sale (Full),"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Oct. 08, 2019","Aug. 27, 2019",-
+TSLA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Aug. 07, 2019","Jul. 24, 2019","CALL OPTION, $265, EXP. 8/09/19"
+TSLA,Sale,"$100,001 - $250,000",James R. Langevin,House / D,"Aug. 07, 2019","Jul. 15, 2019",-
+TSLA,Sale,"$1,001 - $15,000",James R. Langevin,House / D,"Aug. 07, 2019","Jul. 03, 2019","CALL OPTION, $1245, EXP. 7/12/19"
+TSLA,Sale,"$15,001 - $50,000",Tom Malinowski,House / D,"Jul. 09, 2021","May. 03, 2019",COVERED SHORT
+TSLA,Sale,"$1,001 - $15,000",James R. Langevin,House / D,"Apr. 29, 2019","Apr. 26, 2019","PUT OPTION, $260, EXP. 5/3/19"
+TSLA,Sale,"$1,001 - $15,000",James R. Langevin,House / D,"Apr. 29, 2019","Apr. 24, 2019","CALL OPTION, $275, EXP. 5/3/19"
+TSLA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Apr. 29, 2019","Apr. 24, 2019","PUT OPTION, $260, EXP. 5/3/19"
+TSLA,Purchase,"$1,001 - $15,000",Tom Malinowski,House / D,"Jul. 09, 2021","Apr. 23, 2019",COVERED SHORT
+TSLA,Purchase,"$15,001 - $50,000",Tom Malinowski,House / D,"Jul. 09, 2021","Apr. 04, 2019",COVERED SHORT
+TSLA,Sale,"$1,001 - $15,000",James R. Langevin,House / D,"Apr. 12, 2019","Apr. 01, 2019","CALL OPTION, $292.50, EXP. 4/5/19"
+TSLA,Purchase,"$100,001 - $250,000",James R. Langevin,House / D,"Mar. 29, 2019","Mar. 22, 2019",-
+TSLA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Mar. 29, 2019","Mar. 15, 2019","CALL OPTION, $277.50, EXP. 4/12/19"
+TSLA,Purchase,"$100,001 - $250,000",James R. Langevin,House / D,"Mar. 29, 2019","Mar. 15, 2019",-
+TSLA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Jan. 10, 2019","Dec. 28, 2018",-
+TSLA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Jan. 10, 2019","Dec. 28, 2018",-
+TSLA,Sale,"$1,001 - $15,000",Roger W. Marshall,House / R,"Dec. 06, 2018","Nov. 07, 2018",DC#2
+TSLA,Purchase,"$1,001 - $15,000",Roger W. Marshall,House / R,"Dec. 06, 2018","Nov. 05, 2018",DC#2
+TSLA,Sale,"$1,001 - $15,000",James R. Langevin,House / D,"Mar. 29, 2019","Oct. 25, 2018",-
+TSLA,Sale,"$100,001 - $250,000",James R. Langevin,House / D,"Mar. 29, 2019","Oct. 24, 2018",-
+TSLA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Mar. 29, 2019","Oct. 24, 2018","CALL OPTION, $290, EXP. 11/16/18"
+TSLA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Oct. 26, 2018","Oct. 09, 2018","CALL OPTION, $300, EXP. 10/19/18"
+TSLA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Oct. 16, 2018","Oct. 08, 2018","CALL OPTION, $300, EXP. 10/19/18"
+TSLA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Oct. 16, 2018","Oct. 08, 2018","CALL OPTION, $300, EXP. 10/19/18"
+TSLA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Oct. 16, 2018","Oct. 04, 2018","CALL OPTION, $390, EXP. 10/26/18"
+TSLA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Oct. 16, 2018","Oct. 03, 2018","CALL OPTION, $320, EXP. 10/12/18"
+TSLA,Sale,"$1,001 - $15,000",James R. Langevin,House / D,"Oct. 16, 2018","Oct. 01, 2018","CALL OPTION, $320, EXP. 10/12/18"
+TSLA,Purchase,"$100,001 - $250,000",James R. Langevin,House / D,"Oct. 16, 2018","Sep. 28, 2018",-
+TSLA,Sale,"$15,001 - $50,000",Zoe Lofgren,House / D,"Oct. 09, 2018","Sep. 21, 2018",-
+TSLA,Sale,"$1,001 - $15,000",Roger W. Marshall,House / R,"Aug. 10, 2018","Aug. 07, 2018",-
+TSLA,Sale,"$1,001 - $15,000",Roger W. Marshall,House / R,"Aug. 10, 2018","Aug. 03, 2018",DC#2
+TSLA,Purchase,"$1,001 - $15,000",Roger W. Marshall,House / R,"Aug. 10, 2018","Jul. 24, 2018",DC#2
+TSLA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Jun. 07, 2018","May. 07, 2018",-
+TSLA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Dec. 11, 2017","Nov. 27, 2017",-
+TSLA,Purchase,"$1,001 - $15,000",Roger W. Marshall,House / R,"Aug. 10, 2018","Nov. 07, 2017",DC#2
+TSLA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Sep. 12, 2017","Aug. 24, 2017",-
+TSLA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Sep. 12, 2017","Aug. 24, 2017",-
+TSLA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Aug. 18, 2017","Jul. 28, 2017",-
+TSLA,Sale,"$1,001 - $15,000",Roger W. Marshall,House / R,"Aug. 06, 2018","Jan. 30, 2017",-
+TSLA,Sale,"$1,001 - $15,000",K. Michael Conaway,House / R,"Oct. 12, 2016","Sep. 12, 2016",-
+TSLA,Purchase,"$1,001 - $15,000",K. Michael Conaway,House / R,"Mar. 03, 2015","Feb. 11, 2015",-
+TSLA,Purchase,"$1,001 - $15,000",Mr. Nick J. Rahall Ii,House / D,"Mar. 12, 2014","Feb. 26, 2014",$260 EXP 04/19/14
+TSLA,Sale,"$1,001 - $15,000",Mr. Nick J. Rahall Ii,House / D,"Mar. 12, 2014","Feb. 26, 2014",$260 EXP 04/19/14
+TSLA,Sale,"$1,001 - $15,000",Mr. Nick J. Rahall Ii,House / D,"Feb. 14, 2014","Jan. 27, 2014",PUT TESLA MOTORS $190 EXP 06/21/14
+TSLA,Purchase,"$1,001 - $15,000",Mr. Nick J. Rahall Ii,House / D,"Feb. 14, 2014","Jan. 23, 2014",PUT TESLA MOTORS $190 EXP 06/21/14

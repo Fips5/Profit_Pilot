@@ -1,0 +1,9 @@
+Stock,Transaction Type,Transaction Amount,Politician Name,Politician Position,Filed Date,Traded Date,Description
+IBKR,Sale,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Dec. 10, 2024","Nov. 13, 2024",-
+IBKR,Purchase,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Jul. 03, 2024","Jun. 06, 2024",-
+IBKR,Sale,"$100,001 - $250,000",Nancy Pelosi,House / D,"Jun. 09, 2020","May. 08, 2020","SOLD 3,000 SHARES."
+IBKR,Purchase,"$1,001 - $15,000",Thomas Macarthur,House / R,"Jan. 11, 2019","Dec. 21, 2019",-
+IBKR,Purchase,"$1,001 - $15,000",Thomas Macarthur,House / R,"Jan. 11, 2019","Dec. 20, 2018",-
+IBKR,Purchase,"$1,001 - $15,000",Thomas Macarthur,House / R,"Jan. 11, 2019","Dec. 19, 2018",-
+IBKR,Purchase,"$1,001 - $15,000",Thomas Macarthur,House / R,"Jan. 11, 2019","Dec. 18, 2018",-
+IBKR,Sale,"$1,001 - $15,000",Thomas Macarthur,House / R,"Jun. 07, 2015","May. 27, 2015",-

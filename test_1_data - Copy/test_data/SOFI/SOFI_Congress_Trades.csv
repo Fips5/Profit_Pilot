@@ -1,0 +1,5 @@
+Stock,Transaction Type,Transaction Amount,Politician Name,Politician Position,Filed Date,Traded Date,Description
+SOFI,Purchase,"$1,001 - $15,000",James Comer,House / R,"Jan. 10, 2025","Jan. 02, 2025",-
+SOFI,Purchase,"$1,001 - $15,000",James Comer,House / R,"Jan. 10, 2025","Jan. 02, 2025",-
+SOFI,Sale (Full),"$1,001 - $15,000","Carper, Thomas R.",Senate / D,"Mar. 29, 2024","Mar. 21, 2024",-
+SOFI,Purchase,"$1,001 - $15,000","Carper, Thomas R.",Senate / D,"Sep. 05, 2023","Aug. 10, 2023",-

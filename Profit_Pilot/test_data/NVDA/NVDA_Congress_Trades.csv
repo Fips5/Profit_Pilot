@@ -1,0 +1,302 @@
+Stock,Transaction Type,Transaction Amount,Politician Name,Politician Position,Filed Date,Traded Date,Description
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 10, 2025","Jan. 29, 2025",-
+NVDA,Sale,"$1,001 - $15,000",Rob Bresnahan,House / R,"Feb. 13, 2025","Jan. 29, 2025",-
+NVDA,Sale,"$1,001 - $15,000",Rob Bresnahan,House / R,"Feb. 13, 2025","Jan. 29, 2025",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 10, 2025","Jan. 28, 2025",-
+NVDA,Sale,"$1,001 - $15,000",Rob Bresnahan,House / R,"Feb. 13, 2025","Jan. 28, 2025",-
+NVDA,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 21, 2025",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 10, 2025","Jan. 17, 2025",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 10, 2025","Jan. 16, 2025",-
+NVDA,Purchase,"$250,001 - $500,000",Nancy Pelosi,House / D,"Jan. 17, 2025","Jan. 14, 2025",PURCHASED 50 CALL OPTIONS WITH A STRIKE PRICE OF $80 AND AN EXPIRATION DATE OF 1/16/26.
+NVDA,Purchase,"$1,001 - $15,000","Boozman, John",Senate / R,"Feb. 08, 2025","Jan. 14, 2025",-
+NVDA,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Jan. 27, 2025","Jan. 08, 2025",-
+NVDA,Sale (Partial),"$15,001 - $50,000","Whitehouse, Sheldon",Senate / D,"Jan. 08, 2025","Jan. 06, 2025",-
+NVDA,Purchase,"$1,001 - $15,000",James Comer,House / R,"Jan. 10, 2025","Jan. 02, 2025",-
+NVDA,Sale,"$1,000,001 - $5,000,000",Nancy Pelosi,House / D,"Jan. 17, 2025","Dec. 31, 2024","SOLD 10,000 SHARES."
+NVDA,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Dec. 27, 2024","Dec. 24, 2024",-
+NVDA,Purchase,"$500,001 - $1,000,000",Nancy Pelosi,House / D,"Jan. 17, 2025","Dec. 20, 2024","EXERCISED 500 CALL OPTIONS PURCHASED 11/22/23 (50,000 SHARES) AT A STRIKE PRICE OF $12 WITH AN EXPIRATION DATE"
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jan. 14, 2025","Dec. 19, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Nov. 27, 2024","Nov. 25, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Dec. 10, 2024","Nov. 13, 2024",-
+NVDA,Sale,"$15,001 - $50,000",Morgan Mcgarvey,House / D,"Dec. 10, 2024","Nov. 13, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Dec. 10, 2024","Nov. 13, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Dec. 10, 2024","Nov. 13, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Dec. 10, 2024","Nov. 13, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 05, 2024","Nov. 12, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Jared Moskowitz,House / D,"Dec. 09, 2024","Nov. 08, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Nov. 01, 2024","Nov. 01, 2024",-
+NVDA,Purchase,"$15,001 - $50,000",Thomas R. Suozzi,House / D,"Nov. 12, 2024","Oct. 24, 2024",-
+NVDA,Sale,"$15,001 - $50,000",Thomas R. Suozzi,House / D,"Nov. 12, 2024","Oct. 24, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 06, 2024","Oct. 17, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Thomas R. Suozzi,House / D,"Nov. 07, 2024","Oct. 02, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Sep. 16, 2024","Sep. 16, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Sep. 12, 2024","Sep. 10, 2024",-
+NVDA,Sale,"$1,001 - $15,000",John James,House / R,"Sep. 06, 2024","Sep. 04, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Sep. 04, 2024","Sep. 03, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Marjorie Taylor Mrs Greene,House / R,"Aug. 22, 2024","Aug. 21, 2024",-
+NVDA,Purchase,"$1,000,001 - $5,000,000",Nancy Pelosi,House / D,"Jul. 30, 2024","Jul. 26, 2024","PURCHASED 10,000 SHARES."
+NVDA,Purchase,"$1,001 - $15,000",Jared Moskowitz,House / D,"Aug. 06, 2024","Jul. 05, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Jared Moskowitz,House / D,"Aug. 06, 2024","Jul. 05, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Aug. 16, 2024","Jul. 02, 2024",-
+NVDA,Sale,"$15,001 - $50,000",Kathy Manning,House / D,"Aug. 16, 2024","Jul. 02, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Aug. 16, 2024","Jul. 02, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jul. 09, 2024","Jun. 28, 2024",-
+NVDA,Purchase,"$1,000,001 - $5,000,000",Nancy Pelosi,House / D,"Jul. 02, 2024","Jun. 26, 2024","PURCHASED 10,000 SHARES."
+NVDA,Sale,"$1,001 - $15,000",Greg Landsman,House / D,"Aug. 14, 2024","Jun. 03, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Jul. 03, 2024","May. 31, 2024",-
+NVDA,Sale,"$15,001 - $50,000",Greg Landsman,House / D,"Aug. 14, 2024","May. 29, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Stephen F. Lynch,House / D,"May. 23, 2024","May. 22, 2024",-
+NVDA,Sale,"$50,001 - $100,000",Pete Sessions,House / R,"May. 22, 2024","May. 21, 2024",-
+NVDA,Sale (Full),"$15,001 - $50,000","Tuberville, Tommy",Senate / R,"May. 15, 2024","Apr. 30, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Dan Newhouse,House / R,"Apr. 25, 2024","Apr. 10, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",John James,House / R,"Sep. 02, 2024","Mar. 13, 2024",-
+NVDA,Purchase,"$1,001 - $15,000","Carper, Thomas R.",Senate / D,"Mar. 29, 2024","Mar. 07, 2024",-
+NVDA,Sale,"$15,001 - $50,000",Thomas R. Suozzi,House / D,"Apr. 02, 2024","Mar. 04, 2024",-
+NVDA,Sale,"$250,001 - $500,000",Daniel Meuser,House / R,"Mar. 21, 2024","Feb. 20, 2024",-
+NVDA,Sale,"$15,001 - $50,000",Daniel Meuser,House / R,"Mar. 21, 2024","Feb. 20, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",Michael Patrick Guest,House / R,"Mar. 12, 2024","Feb. 20, 2024",-
+NVDA,Sale,"$15,001 - $50,000",Daniel Meuser,House / R,"Mar. 21, 2024","Feb. 20, 2024",-
+NVDA,Purchase,"$1,001 - $15,000",John James,House / R,"Sep. 02, 2024","Feb. 09, 2024",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 07, 2024","Feb. 08, 2024",-
+NVDA,Purchase,"$15,001 - $50,000","Mullin, Markwayne",Senate / R,"Jan. 26, 2024","Jan. 02, 2024",-
+NVDA,Purchase,$456.00,Pete Sessions,House / R,"Dec. 26, 2023","Dec. 06, 2023",1 SHARE
+NVDA,Sale,"$1,001 - $15,000",John Curtis,House / R,"Dec. 15, 2023","Dec. 04, 2023",-
+NVDA,Purchase,"$1,000,001 - $5,000,000",Nancy Pelosi,House / D,"Dec. 21, 2023","Nov. 22, 2023",PURCHASED 50 CALL OPTIONS WITH A STRIKE PRICE OF $120 AND AN EXPIRATION DATE OF 12/20/24.
+NVDA,Sale,"$1,001 - $15,000",HON. GREG STANTON,House / D,"Nov. 09, 2023","Oct. 24, 2023",-
+NVDA,Purchase,"$1,001 - $15,000","Mullin, Markwayne",Senate / R,"Nov. 01, 2023","Oct. 03, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",HON. GREG STANTON,House / D,"Nov. 09, 2023","Sep. 26, 2023",-
+NVDA,Purchase,"$15,001 - $50,000","Mullin, Markwayne",Senate / R,"Oct. 12, 2023","Sep. 13, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Sep. 23, 2023","Sep. 12, 2023",3 SHARES $1344
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Oct. 15, 2023","Sep. 11, 2023",-
+NVDA,Sale,"$15,001 - $50,000",Daniel Meuser,House / R,"Sep. 14, 2023","Aug. 14, 2023",-
+NVDA,Sale,"$100,001 - $250,000",Daniel Meuser,House / R,"Sep. 14, 2023","Aug. 14, 2023",-
+NVDA,Sale,"$15,001 - $50,000",Daniel Meuser,House / R,"Sep. 14, 2023","Aug. 14, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Sep. 16, 2023","Aug. 10, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Michael Patrick Guest,House / R,"Aug. 23, 2023","Aug. 07, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Greg Landsman,House / D,"Aug. 14, 2024","Aug. 02, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 21, 2023","Jul. 18, 2023",-
+NVDA,Purchase,$424.53,Pete Sessions,House / R,"Jun. 26, 2023","Jun. 23, 2023",CS ROTH 1 SHARE FILING ID #20023211
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jul. 11, 2023","Jun. 22, 2023",-
+NVDA,Sale,"$250,001 - $500,000",Daniel Meuser,House / R,"Jun. 26, 2023","May. 31, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Greg Landsman,House / D,"Aug. 14, 2024","May. 30, 2023",-
+NVDA,Sale (Partial),"$1,001 - $15,000","Carper, Thomas R.",Senate / D,"Jun. 30, 2023","May. 25, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 11, 2023","May. 09, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 11, 2023","May. 08, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Daniel Meuser,House / R,"Jun. 03, 2023","May. 05, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 11, 2023","May. 04, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"May. 19, 2023","Apr. 28, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"May. 19, 2023","Apr. 28, 2023",-
+NVDA,Sale,"$1,001 - $15,000",John Curtis,House / R,"May. 10, 2023","Apr. 26, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Dan Newhouse,House / R,"May. 26, 2023","Apr. 26, 2023",-
+NVDA,Purchase,"$15,001 - $50,000",Jonathan Jackson,House / D,"May. 12, 2023","Apr. 14, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Daniel Goldman,House / D,"May. 19, 2023","Apr. 10, 2023",-
+NVDA,Purchase,"$1,001 - $15,000","Tuberville, Tommy",Senate / R,"May. 11, 2023","Apr. 03, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"May. 19, 2023","Apr. 03, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Greg Landsman,House / D,"Aug. 14, 2024","Mar. 27, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Apr. 12, 2023","Mar. 07, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 20, 2023","Mar. 06, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Daniel Goldman,House / D,"Apr. 17, 2023","Mar. 01, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Mar. 23, 2023","Feb. 28, 2023",-
+NVDA,Sale,"$1,001 - $15,000",Morgan Mcgarvey,House / D,"Mar. 23, 2023","Feb. 28, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 17, 2023","Feb. 27, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 17, 2023","Feb. 23, 2023",-
+NVDA,Sale,"$1,001 - $15,000",John Curtis,House / R,"Mar. 13, 2023","Feb. 23, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 17, 2023","Feb. 21, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Greg Landsman,House / D,"Aug. 14, 2024","Feb. 01, 2023",-
+NVDA,Purchase,"$1,001 - $15,000",Greg Landsman,House / D,"Aug. 14, 2024","Jan. 12, 2023",-
+NVDA,Purchase,"$1,001 - $15,000","Sullivan, Dan",Senate / R,"Dec. 21, 2022","Nov. 22, 2022",-
+NVDA,Purchase,"$1,001 - $15,000","Sullivan, Dan",Senate / R,"Dec. 21, 2022","Nov. 22, 2022",-
+NVDA,Purchase,"$1,001 - $15,000","Sullivan, Dan",Senate / R,"Dec. 21, 2022","Nov. 22, 2022",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 17, 2022","Nov. 08, 2022",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 10, 2022","Oct. 17, 2022",-
+NVDA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Nov. 10, 2022","Oct. 12, 2022",-
+NVDA,Sale (Full),"$1,001 - $15,000","Tuberville, Tommy",Senate / R,"Nov. 10, 2022","Oct. 05, 2022",-
+NVDA,Sale,"$100,001 - $250,000",Nancy Pelosi,House / D,"Oct. 14, 2022","Sep. 16, 2022",SOLD 50 CALL OPTIONS PURCHASED 7/23/21 WITH A STRIKE PRICE OF $100 AND AN EXPIRATION DATE OF 9/16/22.
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Oct. 16, 2022","Sep. 15, 2022",-
+NVDA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Sep. 14, 2022","Aug. 05, 2022",-
+NVDA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Aug. 10, 2022","Jul. 27, 2022",-
+NVDA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Aug. 10, 2022","Jul. 27, 2022",-
+NVDA,Purchase,"$15,001 - $50,000",Kathy Manning,House / D,"Aug. 10, 2022","Jul. 27, 2022",-
+NVDA,Sale,"$1,000,001 - $5,000,000",Nancy Pelosi,House / D,"Jul. 26, 2022","Jul. 26, 2022","SOLD 25,000 SHARES."
+NVDA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Aug. 10, 2022","Jul. 15, 2022",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Jul. 09, 2022","Jul. 08, 2022",15 SHARES
+NVDA,Purchase,"$1,001 - $15,000",Roger Williams,House / R,"Jun. 12, 2024","Jun. 30, 2022",-
+NVDA,Purchase,"$1,000,001 - $5,000,000",Nancy Pelosi,House / D,"Jul. 14, 2022","Jun. 17, 2022","EXERCISED 200 CALL OPTIONS (20,000 SHARES) EXPIRING 6/17/22 AT A STRIKE PRICE OF $100."
+NVDA,Sale (Full),"$15,001 - $50,000","Tuberville, Tommy",Senate / R,"Jul. 13, 2022","Jun. 15, 2022",Option Type: Short Sale Strike price: $150.00  Expires: 03/17/2023
+NVDA,Purchase,"$15,001 - $50,000","Tuberville, Tommy",Senate / R,"Jul. 13, 2022","Jun. 15, 2022",Option Type: Put Strike price: $180.00  Expires: 06/17/2022
+NVDA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Jul. 07, 2022","Jun. 10, 2022",-
+NVDA,Purchase,"$1,001 - $15,000","Tuberville, Tommy",Senate / R,"Jul. 13, 2022","Jun. 08, 2022",Option Type: Short Sale Strike price: $150.00  Expires: 12/16/2022
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jun. 16, 2022","May. 27, 2022",-
+NVDA,Sale,"$1,001 - $15,000",Alan S. Lowenthal,House / D,"Apr. 12, 2022","Apr. 06, 2022",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Apr. 14, 2022","Mar. 22, 2022",2 NVDA SHARES
+NVDA,Purchase,"$1,001 - $15,000",Dan Newhouse,House / R,"May. 26, 2023","Mar. 08, 2022",-
+NVDA,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"May. 20, 2022","Mar. 04, 2022",-
+NVDA,Sale,"$15,001 - $50,000",Donald Sternoff Beyer Jr.,House / D,"Mar. 03, 2022","Feb. 28, 2022",SALE OF 200 UNITS NVIDIA CORP
+NVDA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Mar. 04, 2022","Feb. 18, 2022",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 18, 2022","Jan. 31, 2022",-
+NVDA,Purchase,"$1,001 - $15,000","Carper, Thomas R.",Senate / D,"Feb. 03, 2022","Jan. 31, 2022",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Feb. 18, 2022","Jan. 26, 2022",-
+NVDA,Sale,"$100,001 - $250,000",Daniel Meuser,House / R,"Feb. 16, 2022","Jan. 21, 2022",-
+NVDA,Sale,"$1,001 - $15,000",Daniel Meuser,House / R,"Feb. 16, 2022","Jan. 21, 2022",-
+NVDA,Sale,"$1,001 - $15,000",Daniel Meuser,House / R,"Feb. 16, 2022","Jan. 21, 2022",-
+NVDA,Sale (Partial),"$1,001 - $15,000","Carper, Thomas R.",Senate / D,"Feb. 03, 2022","Jan. 18, 2022",-
+NVDA,Purchase,"$15,001 - $50,000","Collins, Susan M.",Senate / R,"Feb. 17, 2022","Jan. 06, 2022",-
+NVDA,Sale,"$1,001 - $15,000",Donald Sternoff  Beyer Jr,House / D,"Dec. 02, 2021","Nov. 26, 2021","SALE 20 UNITS NVIDIA CORP; CAPITAL GAIN $5,226"
+NVDA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Feb. 11, 2022","Nov. 18, 2021",-
+NVDA,Sale,"$15,001 - $50,000",Kathy Manning,House / D,"Feb. 11, 2022","Nov. 12, 2021",-
+NVDA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Feb. 11, 2022","Nov. 05, 2021",-
+NVDA,Purchase,"$1,001 - $15,000",Dan Newhouse,House / R,"May. 26, 2023","Nov. 02, 2021",-
+NVDA,Sale (Full),"$500,001 - $1,000,000","Hickenlooper, John",Senate / D,"Dec. 10, 2021","Nov. 01, 2021",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 15, 2021","Oct. 29, 2021",-
+NVDA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Feb. 11, 2022","Oct. 19, 2021",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Nov. 15, 2021","Oct. 05, 2021",-
+NVDA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Feb. 11, 2022","Sep. 01, 2021",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Aug. 15, 2021","Aug. 02, 2021",-
+NVDA,Sale (Full),"$15,001 - $50,000","Tuberville, Tommy",Senate / R,"Aug. 13, 2021","Jul. 28, 2021",Option Type: Put Strike price: $180.00  Expires: 06/17/2022
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 09, 2021","Jul. 28, 2021",-
+NVDA,Purchase,"$500,001 - $1,000,000",Nancy Pelosi,House / D,"Aug. 20, 2021","Jul. 23, 2021","PURCHASED 5,000 SHARES."
+NVDA,Purchase,"$250,001 - $500,000",Nancy Pelosi,House / D,"Aug. 20, 2021","Jul. 23, 2021",PURCHASED 50 CALL OPTIONS WITH A STRIKE PRICE OF $100 AND AN EXPIRATION DATE OF 9/16/22.
+NVDA,Purchase,"$1,001 - $15,000",David Cheston Rouzer,House / R,"Aug. 12, 2021","Jul. 20, 2021",-
+NVDA,Purchase,"$1,001 - $15,000",Marjorie Taylor Greene,House / R,"Aug. 04, 2021","Jul. 19, 2021",-
+NVDA,Purchase,"$1,001 - $15,000",Blake Moore,House / R,"Aug. 13, 2021","Jul. 16, 2021",NVDA SEP 17 21 580.0 P
+NVDA,Sale,"$1,001 - $15,000",Blake Moore,House / R,"Aug. 13, 2021","Jul. 16, 2021",NVDA SEP 17 21 585.0 P
+NVDA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Feb. 11, 2022","Jun. 22, 2021",-
+NVDA,Sale,"$1,001 - $15,000",Kathy Manning,House / D,"Feb. 11, 2022","Jun. 18, 2021",-
+NVDA,Sale,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jun. 04, 2021",-
+NVDA,Sale (Partial),"$1,001 - $15,000","Carper, Thomas R.",Senate / D,"Jul. 06, 2021","Jun. 04, 2021",-
+NVDA,Purchase,"$1,000,001 - $5,000,000",Nancy Pelosi,House / D,"Jul. 02, 2021","Jun. 03, 2021",PURCHASED 50 CALL OPTIONS WITH A STRIKE PRICE OF $400 AND AN EXPIRATION DATE OF 6/17/22.
+NVDA,Sale,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","May. 05, 2021",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Jul. 09, 2021","May. 04, 2021",NVIDIA 10 SHARES
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"May. 05, 2021","May. 04, 2021",10 SHARES
+NVDA,Purchase,"$1,001 - $15,000",Kathy Manning,House / D,"Feb. 11, 2022","Mar. 25, 2021",-
+NVDA,Purchase,"$1,001 - $15,000",Alan S. Lowenthal,House / D,"Apr. 04, 2021","Mar. 23, 2021",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 21, 2021","Mar. 17, 2021",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Apr. 21, 2021","Mar. 15, 2021",-
+NVDA,Purchase,"$1,001 - $15,000",Alan S. Lowenthal,House / D,"Mar. 23, 2021","Mar. 11, 2021",-
+NVDA,Sale,"$1,001 - $15,000",Blake Moore,House / R,"Jul. 17, 2021","Feb. 25, 2021",NVDA APR 16 21 405.0 PUT NOT PART OF A COMPENSATION PACKAGE OR HELD AS AN ESOP
+NVDA,Purchase,"$1,001 - $15,000",Blake Moore,House / R,"Jul. 17, 2021","Feb. 25, 2021",NVDA APR 16 21 400.0 PUT NOT PART OF A COMPENSATION PACKAGE OR HELD AS AN ESOP
+NVDA,Sale,"$1,001 - $15,000",Mr. Peter Meijer,House / R,"Mar. 16, 2021","Feb. 16, 2021",-
+NVDA,Sale,"$1,001 - $15,000",Donald Sternoff  Beyer Jr,House / D,"Feb. 27, 2021","Feb. 04, 2021",SALE OD 5 UNITS OF NVIDIA CORP
+NVDA,Purchase,"$1,001 - $15,000",Blake Moore,House / R,"Jul. 17, 2021","Jan. 20, 2021",MAR 19 21 420.0 PUT NOT PART OF A COMPENSATION PACKAGE OR HELD AS AN ESOP
+NVDA,Sale,"$1,001 - $15,000",Blake Moore,House / R,"Jul. 17, 2021","Jan. 20, 2021",MAR 19 21 425.0 PUT NOT PART OF A COMPENSATION PACKAGE OR HELD AS AN ESOP
+NVDA,Sale,"$1,001 - $15,000",Donald Sternoff  Beyer Jr,House / D,"Jan. 31, 2021","Jan. 15, 2021",SALE OF 5 UNITS NVIDIA CORP
+NVDA,Sale,"$1,001 - $15,000",Donald Sternoff  Beyer Jr,House / D,"Jan. 31, 2021","Jan. 11, 2021",SALE OF 5 UNITS NVIDIA CORP
+NVDA,Purchase,"$1,001 - $15,000",Gilbert Cisneros,House / D,"Jan. 11, 2021","Dec. 31, 2020",-
+NVDA,Purchase,"$50,001 - $100,000","Roberts, Pat",Senate / R,"Dec. 31, 2020","Dec. 21, 2020",-
+NVDA,Purchase,"$1,001 - $15,000",Donald Sternoff Beyer Jr,House / D,"Dec. 01, 2020","Nov. 17, 2020",5 UNITS NVIDIA CORP
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 09, 2020","Nov. 16, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Dec. 09, 2020","Nov. 11, 2020",-
+NVDA,Purchase,"$1,001 - $15,000",Donald Sternoff Beyer Jr,House / D,"Dec. 01, 2020","Nov. 04, 2020",10 UNITS NVIDIA CORP
+NVDA,Sale (Full),"$15,001 - $50,000","Roberts, Pat",Senate / R,"Dec. 03, 2020","Nov. 04, 2020",-
+NVDA,Purchase,"$1,001 - $15,000","Wyden, Ron",Senate / D,"Nov. 16, 2020","Oct. 16, 2020",-
+NVDA,Purchase,"$1,001 - $15,000","Wyden, Ron",Senate / D,"Nov. 16, 2020","Oct. 16, 2020",-
+NVDA,Purchase,"$1,001 - $15,000","Wyden, Ron",Senate / D,"Nov. 16, 2020","Oct. 16, 2020",-
+NVDA,Sale,"$50,001 - $100,000",Debbie Dingell,House / D,"Oct. 24, 2020","Oct. 13, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Oct. 13, 2020","Sep. 14, 2020",-
+NVDA,Purchase,"$15,001 - $50,000","Roberts, Pat",Senate / R,"Sep. 30, 2020","Sep. 14, 2020",-
+NVDA,Sale,"$15,001 - $50,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Sep. 08, 2020",-
+NVDA,Sale,"$15,001 - $50,000",Gilbert Cisneros,House / D,"Oct. 14, 2020","Sep. 08, 2020",-
+NVDA,Sale (Full),"$15,001 - $50,000","Roberts, Pat",Senate / R,"Sep. 30, 2020","Sep. 04, 2020",-
+NVDA,Purchase,"$15,001 - $50,000",Brian Higgins,House / D,"Aug. 11, 2021","Sep. 04, 2020",-
+NVDA,Purchase,"$50,001 - $100,000","Roberts, Pat",Senate / R,"Sep. 30, 2020","Sep. 04, 2020",-
+NVDA,Sale (Full),"$15,001 - $50,000","Roberts, Pat",Senate / R,"Sep. 30, 2020","Sep. 04, 2020",-
+NVDA,Sale (Full),"$15,001 - $50,000","Roberts, Pat",Senate / R,"Sep. 30, 2020","Sep. 04, 2020",-
+NVDA,Purchase,"$1,001 - $15,000",Ed Perlmutter,House / D,"Nov. 11, 2020","Sep. 03, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Gilbert Cisneros,House / D,"Sep. 14, 2020","Aug. 24, 2020",-
+NVDA,Purchase,"$50,001 - $100,000","Wyden, Ron",Senate / D,"Aug. 29, 2020","Aug. 21, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Aug. 20, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Aug. 19, 2020",-
+NVDA,Purchase,"$15,001 - $50,000","Wyden, Ron",Senate / D,"Aug. 29, 2020","Aug. 19, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Aug. 03, 2020",-
+NVDA,Purchase,"$50,001 - $100,000","Wyden, Ron",Senate / D,"Aug. 29, 2020","Jul. 30, 2020",-
+NVDA,Purchase,"$15,001 - $50,000","Wyden, Ron",Senate / D,"Jul. 31, 2020","Jul. 27, 2020",-
+NVDA,Sale,"$15,001 - $50,000",Donald Sternoff Beyer Jr,House / D,"Aug. 09, 2020","Jul. 14, 2020",SALE OF 50 UNITS NVIDIA CORP
+NVDA,Sale,"$1,001 - $15,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Jul. 10, 2020",-
+NVDA,Sale (Partial),"$1,001 - $15,000","Carper, Thomas R.",Senate / D,"Aug. 04, 2020","Jul. 09, 2020",-
+NVDA,Purchase,"$15,001 - $50,000","Wyden, Ron",Senate / D,"Jul. 31, 2020","Jul. 06, 2020",-
+NVDA,Purchase,"$15,001 - $50,000","Wyden, Ron",Senate / D,"Jul. 02, 2020","Jun. 26, 2020",-
+NVDA,Purchase,"$15,001 - $50,000","Wyden, Ron",Senate / D,"Jul. 02, 2020","Jun. 24, 2020",-
+NVDA,Purchase,"$50,001 - $100,000","Wyden, Ron",Senate / D,"Jul. 02, 2020","Jun. 12, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Gilbert Cisneros,House / D,"Jul. 17, 2020","Jun. 11, 2020",-
+NVDA,Sale,"$15,001 - $50,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Jun. 03, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Jul. 09, 2020","Jun. 01, 2020",-
+NVDA,Purchase,"$15,001 - $50,000","Roberts, Pat",Senate / R,"Jul. 08, 2020","May. 29, 2020",-
+NVDA,Purchase,"$15,001 - $50,000","Roberts, Pat",Senate / R,"Jul. 08, 2020","May. 29, 2020",-
+NVDA,Purchase,"$100,001 - $250,000","Wyden, Ron",Senate / D,"Jun. 01, 2020","May. 26, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Gilbert Cisneros,House / D,"Jun. 16, 2020","May. 20, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Donald Sternoff Beyer Jr,House / D,"May. 31, 2020","May. 01, 2020",SALE 20 UNITS NVIDIA CORP
+NVDA,Sale (Full),"$50,001 - $100,000","Roberts, Pat",Senate / R,"May. 02, 2020","Apr. 24, 2020",-
+NVDA,Purchase,"$50,001 - $100,000","Wyden, Ron",Senate / D,"May. 05, 2020","Apr. 21, 2020",-
+NVDA,Sale,"$1,001 - $15,000",Gilbert Cisneros,House / D,"Apr. 16, 2020","Mar. 30, 2020",-
+NVDA,Purchase,"$1,001 - $15,000",John Curtis,House / R,"Apr. 09, 2020","Mar. 27, 2020",-
+NVDA,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Mar. 20, 2020",-
+NVDA,Purchase,"$50,001 - $100,000","Roberts, Pat",Senate / R,"Mar. 28, 2020","Mar. 06, 2020",-
+NVDA,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Mar. 03, 2020",-
+NVDA,Sale (Full),"$15,001 - $50,000","Roberts, Pat",Senate / R,"Mar. 28, 2020","Mar. 02, 2020",-
+NVDA,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Mar. 02, 2020",-
+NVDA,Sale,"$100,001 - $250,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Mar. 02, 2020",-
+NVDA,Purchase,"$1,001 - $15,000",Josh Gottheimer,House / D,"Mar. 16, 2020","Feb. 28, 2020",-
+NVDA,Sale (Full),"$15,001 - $50,000","Loeffler, Kelly",Senate / R,"Mar. 31, 2020","Feb. 26, 2020",-
+NVDA,Sale (Partial),"$15,001 - $50,000","Loeffler, Kelly",Senate / R,"Mar. 31, 2020","Feb. 24, 2020",-
+NVDA,Sale,"$1,001 - $15,000",David Cheston Rouzer,House / R,"Feb. 27, 2020","Feb. 21, 2020",-
+NVDA,Sale,"$15,001 - $50,000",Mikie Sherrill,House / D,"Apr. 05, 2020","Feb. 20, 2020",-
+NVDA,Purchase,"$1,001 - $15,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Feb. 13, 2020",-
+NVDA,Purchase,"$15,001 - $50,000","Roberts, Pat",Senate / R,"Mar. 04, 2020","Feb. 11, 2020",-
+NVDA,Purchase,"$1,001 - $15,000",Donald Sternoff Beyer Jr,House / D,"Feb. 22, 2020","Jan. 10, 2020",25 UNITS NVIDIA CORP
+NVDA,Sale (Full),"$15,001 - $50,000","Roberts, Pat",Senate / R,"Feb. 03, 2020","Jan. 06, 2020",-
+NVDA,Purchase,"$1,001 - $15,000",Donald Sternoff Beyer Jr,House / D,"Jan. 02, 2020","Dec. 24, 2019",20 UNITS OF NVIDIA CORP
+NVDA,Purchase,"$1,001 - $15,000",Donald Sternoff Beyer Jr,House / D,"Dec. 14, 2019","Dec. 09, 2019",30 UNITS OF NVIDIA CORP.
+NVDA,Sale,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Dec. 02, 2019",-
+NVDA,Purchase,"$1,001 - $15,000",Donald Sternoff Beyer Jr,House / D,"Dec. 14, 2019","Nov. 26, 2019",25 UNITS OF NVIDIA CORP
+NVDA,Purchase,"$1,001 - $15,000",Donald Sternoff Beyer Jr,House / D,"Dec. 14, 2019","Nov. 19, 2019",25 UNITS OF NVIDIA CORP
+NVDA,Purchase,"$1,001 - $15,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Nov. 15, 2019",-
+NVDA,Sale,"$15,001 - $50,000",Gilbert Cisneros,House / D,"Nov. 15, 2019","Oct. 21, 2019",-
+NVDA,Purchase,"$1,001 - $15,000","Roberts, Pat",Senate / R,"Nov. 03, 2019","Oct. 01, 2019",-
+NVDA,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jul. 29, 2019",-
+NVDA,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jul. 08, 2019",-
+NVDA,Purchase,"$1,001 - $15,000",James R. Langevin,House / D,"Sep. 05, 2019","Jul. 03, 2019",-
+NVDA,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Dec. 19, 2022","Jun. 06, 2019",-
+NVDA,Purchase,"$1,001 - $15,000",Gilbert Cisneros,House / D,"Jun. 18, 2019","May. 21, 2019",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Jun. 11, 2019","May. 17, 2019",-
+NVDA,Purchase,"$1,001 - $15,000",Brenda Lulenar Lawrence,House / D,"Aug. 21, 2019","May. 14, 2019",-
+NVDA,Purchase,"$1,001 - $15,000",Gilbert Cisneros,House / D,"May. 14, 2019","Apr. 09, 2019",-
+NVDA,Purchase,"$1,001 - $15,000",Gilbert Cisneros,House / D,"Apr. 16, 2019","Mar. 26, 2019",-
+NVDA,Sale,"$1,001 - $15,000",Nicholas Van Taylor,House / R,"Apr. 15, 2019","Mar. 25, 2019",-
+NVDA,Sale,"$1,001 - $15,000",Roger W. Marshall,House / R,"Apr. 11, 2019","Mar. 21, 2019",-
+NVDA,Purchase,"$1,001 - $15,000",Dean Phillips,House / D,"Apr. 16, 2019","Mar. 06, 2019",-
+NVDA,Sale,"$1,001 - $15,000",Roger Williams,House / R,"Jun. 12, 2024","Mar. 01, 2019",-
+NVDA,Sale,"$1,001 - $15,000",Nicholas Van Taylor,House / R,"Mar. 14, 2019","Feb. 27, 2019",-
+NVDA,Purchase,"$1,001 - $15,000",Dean Phillips,House / D,"Mar. 21, 2019","Feb. 04, 2019",-
+NVDA,Purchase,"$1,001 - $15,000",Nicholas Van Taylor,House / R,"Feb. 15, 2019","Jan. 30, 2019",-
+NVDA,Sale,"$1,001 - $15,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jan. 29, 2019",-
+NVDA,Purchase,"$15,001 - $50,000",Thomas Suozzi,House / D,"Sep. 23, 2021","Jan. 14, 2019",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Jan. 10, 2019","Dec. 28, 2018",-
+NVDA,Purchase,"$1,001 - $15,000","Kyl, Jon",Senate / R,"Jan. 30, 2019","Dec. 12, 2018",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Nov. 15, 2018","Oct. 23, 2018",-
+NVDA,Purchase,"$15,001 - $50,000","Roberts, Pat",Senate / R,"Sep. 30, 2018","Aug. 28, 2018",-
+NVDA,Sale (Full),"$50,001 - $100,000","Roberts, Pat",Senate / R,"Aug. 28, 2018","Jul. 30, 2018",-
+NVDA,Sale,"$1,001 - $15,000",Roger W. Marshall,House / R,"Aug. 10, 2018","Jul. 24, 2018",DC#2
+NVDA,Purchase,"$1,001 - $15,000","Roberts, Pat",Senate / R,"May. 09, 2018","Apr. 25, 2018",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Mar. 07, 2018","Feb. 15, 2018",-
+NVDA,Purchase,"$15,001 - $50,000","Roberts, Pat",Senate / R,"Mar. 03, 2018","Feb. 05, 2018",-
+NVDA,Sale (Full),"$15,001 - $50,000","Roberts, Pat",Senate / R,"Mar. 03, 2018","Feb. 05, 2018",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Oct. 02, 2018","Jan. 08, 2018",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Oct. 02, 2018","Jan. 04, 2018",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Oct. 02, 2018","Jan. 03, 2018",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Dec. 30, 2017","Dec. 29, 2017",-
+NVDA,Purchase,"$1,001 - $15,000","Roberts, Pat",Senate / R,"Dec. 23, 2017","Dec. 07, 2017",-
+NVDA,Purchase,"$1,001 - $15,000","Roberts, Pat",Senate / R,"Dec. 23, 2017","Dec. 01, 2017",-
+NVDA,Purchase,"$15,001 - $50,000","Roberts, Pat",Senate / R,"Dec. 01, 2017","Nov. 30, 2017",-
+NVDA,Purchase,"$1,001 - $15,000",Roger W. Marshall,House / R,"Aug. 10, 2018","Nov. 07, 2017",DC#2
+NVDA,Sale (Full),"$15,001 - $50,000","Roberts, Pat",Senate / R,"Nov. 06, 2017","Oct. 30, 2017",-
+NVDA,Purchase,"$15,001 - $50,000","Roberts, Pat",Senate / R,"Dec. 01, 2017","Sep. 28, 2017",-
+NVDA,Sale,"$1,001 - $15,000",Josh Gottheimer,House / D,"Aug. 13, 2018","Jun. 09, 2017",-
+NVDA,Purchase,"$1,001 - $15,000",Debbie Dingell,House / D,"Mar. 22, 2017","Mar. 16, 2017",-
+NVDA,Purchase,"$1,001 - $15,000",Brenda Lulenar Lawrence,House / D,"Aug. 21, 2019","Mar. 02, 2017",-
+NVDA,Purchase,"$1,001 - $15,000",Pete Sessions,House / R,"Feb. 21, 2017","Feb. 17, 2017",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Feb. 14, 2017","Jan. 11, 2017",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Jun. 16, 2016","May. 18, 2016",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"May. 23, 2016","Apr. 26, 2016",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"May. 23, 2016","Apr. 19, 2016",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Jan. 20, 2016","Jan. 06, 2016",-
+NVDA,Purchase,"$1,001 - $15,000","Whitehouse, Sheldon",Senate / D,"Jan. 20, 2016","Jan. 05, 2016",-
